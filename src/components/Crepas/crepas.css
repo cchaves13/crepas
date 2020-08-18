@@ -1,0 +1,59 @@
+#crepa h1{
+    color: cadetblue;
+}
+ 
+.crepa {
+    height: 40%;
+    margin: 1px;
+    background-color: #c2905bff;
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+     border: 10px solid #825930;
+     padding: 1%; margin: auto;
+     display:inline-block;
+     width: 25%;
+     margin: 15px;
+}
+
+
+
+@media only screen and (max-width: 680px) {
+    #crepa {
+        width:85%;
+        display: block;
+        margin:auto;
+        
+    
+    }
+  }
+.box-description{
+    width: 90%;
+    padding: 1%;
+}
+.detalles{
+    display: flex;
+    margin-top: 5px;
+}
+
+.detalles h5{
+    margin-right: 7px;
+}
+#crepaDescripcion{
+    width: 100%;
+    background-color: white;
+    border-radius: 24px;    
+    border: 2px solid #825930;
+    text-align: center;
+    padding: 10px;
+  
+}
+
+.crepas-btn{
+    background-color: red;
+    padding: 10px;
+    color: #fff;
+}
+#boxBtn{
+    padding: 2%;
+}
