@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './home.css'
+import Schedule from '../Schedule/Schedule';
 
 class Home extends Component {
     constructor(props) {
@@ -14,7 +15,9 @@ class Home extends Component {
         return (
             <div id="homePage">
                 <h1>Este es tu super home page para crepas</h1>
+                <Schedule></Schedule>
             </div>
+            
         )
     }
 }

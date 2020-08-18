@@ -1,0 +1,29 @@
+#horario h1{
+    color:black;
+    margin: auto;
+    margin-block-end: 8%;
+    margin-left: 30%;
+    display: block;
+    font-family:algerian;
+    
+
+}
+.diasHorario{
+    margin-left:10%;
+    font-size: 112%;
+}
+
+
+
+#imagenHorario{
+height: 180%;
+width: 46%;
+margin-left: 6%;
+margin-top: 0.5%;
+}
+   
+
+.flex-container {
+    display: flex;
+    
+  }
