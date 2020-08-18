@@ -2,35 +2,51 @@ import React, { Component } from 'react';
 import { render } from '@testing-library/react';
 import './Navigation.css';
 import { Link  } from "react-router-dom";
+/***/
+import './Navigation.css'
+import { navegation } from './Links'
 
 class Navigation extends Component{
 
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {
+            isSidebarOpen: false
+        }
     }
 
-    render(){
+    handleMenuButtonClick=()=>{
+        this.setState({isSidebarOpen:! this.state.isSidebarOpen})
+    };
+
+    render() {
+        /*console.warn('state', this.state);*//* Esto sirve para ver la consola*/ 
+        const{isSidebarOpen}=this.state;
+        
         return (
-            <div id="navigationContainer">
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Inicio</Link>
+            <div className="container">  
+          <div className="menu-button" onClick={this.handleMenuButtonClick}>
+              <i className="fas fa-bars"></i>
+           </div>  
+           {/*Sidebar*/} 
+           <img className="imagen" src="imagenes/logo2.jpg"></img>
+           
+           { navegation.length &&(
+               <nav className={`nav ${isSidebarOpen ? 'show':''}` }>
+                   <ul className="menu-items"> 
+                   
+                    {navegation.map(  item => (
+                        <li className="menu-list" key={item.label}> 
+                            <a className="menu-link" href={item.url}>{item.label}</a>
                         </li>
-                        <li>
-                            <Link to="/ordena">Ordenalo</Link>
-                        </li>
-                        <li>
-                            <Link to="/otrapagina">OtraPagina</Link>
-                        </li>
-                        <li>
-                            <Link to="/confirmacion">Confirmacion</Link>
-                        </li>
+                        
+                        
+                    ))}
                     </ul>
                 </nav>
+           )}
             </div>
-        );
+        )
     }
 
 }
