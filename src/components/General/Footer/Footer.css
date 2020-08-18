@@ -1,0 +1,33 @@
+.main-footer {
+    color: black;    
+    background-color: #aee6ff;
+    padding-top: 1em;
+    position: relative;
+    width: 100%;
+} 
+
+.row{
+    display: flex;
+}
+
+.row1{
+    
+    margin: 35%;
+    margin-top: 0%;
+    margin-block-end: 0%;
+}
+
+.col{
+    margin: 7%;
+    margin-top: 0%;
+    margin-block-end: 0%;
+}
+
+.title{
+ text-align: center;
+}
+
+
+.list-unstyled{
+    list-style: none;
+}

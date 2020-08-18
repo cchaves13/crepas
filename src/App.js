@@ -18,6 +18,7 @@ import Confirmacion from './components/Confirmacion/Confirmacion';
 class App extends Component {
   render() {
     return (
+      <div className= "content-wrap"> 
       <Router>
       <div>
         <Navigation></Navigation>
@@ -45,6 +46,7 @@ class App extends Component {
         <Footer></Footer>
       </div>
     </Router>
+    </div>
     )
   }
 }
