@@ -6,7 +6,7 @@ export const navegation = [
     },
     {
         label: 'Ordenar',
-        url:'http://codeytek.com'
+        url:'/ordena'
     },
    
 ];
