@@ -14,10 +14,10 @@ class Order extends Component {
     }
     generateOrder(){
         var listCrepas= [
-          {Relleno:"Nutella", Frutas:"Melocoto, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000}, 
-          {Relleno:"Nutella", Frutas:"Melocoto, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000},  
-          {Relleno:"Nutella", Frutas:"Melocoto, Fresa", Toppings:"Chocolate",Precio:2000}, 
-          {Relleno:"Nutella", Frutas:"Melocoto, Fresa", Toppings:"Chocolate",Precio:2000}
+          {Imagen:"Monday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate y caramelo",Precio:2000}, 
+          {Imagen:"wednesday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000},  
+          {Imagen:"sunday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000}, 
+          {Imagen:"tuesday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000}
         ];
         return  listCrepas.map((crepas, i)=> 
            <Crepas CrepasProps={crepas} key={i} ></Crepas>
@@ -27,7 +27,7 @@ class Order extends Component {
     render() {
         return (
             <div id="order">
-                <h1>Ordena Crepas aqui</h1>
+                <h1>Crepas del día, elige la que más te guste</h1>
                 <div id="boxeCrepa">
                     {
                        this.generateOrder()
