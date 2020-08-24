@@ -31,7 +31,7 @@ class App extends Component {
           </Route>
 
           <Route path="/otrapagina">
-            <h1>Aqui ira otro componente</h1>
+            
           </Route>
           
           <Route path="/confirmacion">

@@ -13,19 +13,29 @@ class Schedule extends Component {
     render() {
         return (
                 <div className="flex-container">
-                    <div id="horario" className="diasHorario" >
-                     <h1 >Horario</h1>
-                        <h3> Lunes …………………….................... 5pm a 9:30pm <br></br> <br></br>
-                            Martes …………………....................... 5pm a 9:30pm<br></br> <br></br>
-                            Miércoles  ………………….................. 5pm a 9:30pm<br></br> <br></br>
-                            Jueves ...........………………………… 5pm a 9:30pm<br></br> <br></br>
-                            Viernes ..........………………………… 5pm a 9:30pm<br></br> <br></br>
-                            Sábado   …………..……………...……..  5pm a 9:30pm<br></br> <br></br>
-                            Domingo ………………...........…..…..  5pm a 9:30pm 
-                        </h3>
+                    <div  className="container1" >
+                     <h1 className="titulo" >Express</h1>
+                         <p>Servicio Express gratis <br></br>
+                             5pm a 7pm.<br></br>
+                            Después de las 7pm a 9:30 pm <br></br>express lo realiza Pineapple
+                         </p>
                     </div>
-                        <div id="imagenHorario">
-                            <img id="imagenHorario" src="imgs/Imagenhorario.jpg"></img>
+                        <div className="container2">
+                        <h1 className="titulo">Pago</h1>
+                        <p> 
+                        Efectivo <br></br>
+                        Sinpe móvil
+                         </p>
+                        </div>
+                        <div className="container3">
+                        <h1 className="titulo" >Horario</h1>
+                        <p> 
+                        De  Lunes   a  Viernes  
+                        de  5:00pm a 9:30pm<br></br><br></br>
+                        Sabados y Domingos 
+                        de 2:00pm a 9:30pm
+                        </p>
+                       
                         </div>
                 
                 </div>

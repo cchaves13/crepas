@@ -1,29 +1,43 @@
-#horario h1{
-    color:black;
+ .titulo{
     margin: auto;
     margin-block-end: 8%;
-    margin-left: 30%;
+    margin-left: 5%;
+    font-family:algerian;  
+    font-size: 40px;
     display: block;
-    font-family:algerian;
     
-
 }
-.diasHorario{
-    margin-left:10%;
-    font-size: 112%;
-}
-
-
-
-#imagenHorario{
-height: 180%;
-width: 46%;
-margin-left: 6%;
-margin-top: 0.5%;
-}
-   
-
 .flex-container {
     display: flex;
+  flex-wrap: nowrap;
+
+}
     
-  }
+  
+.container1{
+    background-color:#F9B4E1;
+    width: 500px;
+    margin: 50px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    
+}
+.container2{
+    background-color: #DEA365;
+    width: 500px;
+    margin: 50px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    
+}
+.container3{
+    background-color: #f6f983;
+    width: 500px;
+    margin: 50px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    
+}

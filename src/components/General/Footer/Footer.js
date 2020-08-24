@@ -16,35 +16,16 @@ const Footer = () => {
                      </ul>
                    </div>
                {/* Column2 */}
-                   <div className= "col"> 
-                     <h4 className= "title">Nota&nbsp; <img src= "./imagenes/note.ico"/></h4>
-                     <ul>
-                         <li>Servicio expres gratis de 5pm a 7pm</li>
-                         <li>Despues de las 7pm el expres lo realiza Pineapple</li>
-                         <li>Solo se recibe efectivo</li>
-                     </ul>
-                   </div>
-               {/* Column3 */}
                    <div className= "col">
-                    <h4 className= "title">Contactenos&nbsp; <img src= "./imagenes/person.ico"/> </h4>
-                    <ul className="list-unstyled">
-                          <li > 
-                               <a target="_blank" href="https://www.facebook.com/pages/category/Cr%C3%AAperie/Las-Crepas-de-Vale-108008784244372/"> 
-                               <img id= "img2"src= "./imagenes/facebook.ico"/>&nbsp;Las crepas de Vale
-                               </a>                           
-                           </li>
+                   <h4 className= "title">Contactenos&nbsp; <img src= "./imagenes/person.ico"/> </h4>
 
-                          <li>
+                       <div className= "col1">
+                       <li>
                               <a target="_blank" href=" https://api.whatsapp.com/send?phone=50683710654&text=prueba">
                               <img id= "img3"src= "./imagenes/whatsapp.ico"/>&nbsp;86598745
                               </a>                             
                           
-                          </li> 
-                          <li >
-                              <a target="_blank"  href="https://instagram.com/lascrepasdevale?igshid=v7ra5l8hy9zn">
-                              <img id= "img4"src= "./imagenes/instagram.ico"/>&nbsp;lascrepasdevale
-                              </a>                              
-                          </li>
+                          </li>                          
                           <li>  
                               
                               <a target="_blank" href="tel:+506-28569945">
@@ -52,7 +33,22 @@ const Footer = () => {
                                </a>                        
                                                      
                           </li>
-                    </ul>
+
+                       </div>
+                       <div className= "col2">
+                       <ul className="list-unstyled">
+                         <li >
+                              <a target="_blank"  href="https://instagram.com/lascrepasdevale?igshid=v7ra5l8hy9zn">
+                              <img id= "img4"src= "./imagenes/instagram.ico"/>&nbsp;lascrepasdevale
+                              </a>                              
+                          </li>
+                          <li > 
+                               <a target="_blank" href="https://www.facebook.com/pages/category/Cr%C3%AAperie/Las-Crepas-de-Vale-108008784244372/"> 
+                               <img id= "img2"src= "./imagenes/facebook.ico"/>&nbsp;Las crepas de Vale
+                               </a>                           
+                           </li>
+                        </ul>
+                       </div>                                             
                     </div>
            </div>
                <hr/>

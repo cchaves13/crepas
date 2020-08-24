@@ -14,7 +14,6 @@ class Home extends Component {
     render() {
         return (
             <div id="homePage">
-                <h1>Este es tu super home page para crepas</h1>
                 <Schedule></Schedule>
             </div>
             

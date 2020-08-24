@@ -1,7 +1,7 @@
 .container{
     width:auto;
     height:50px;
-    background: #aee6ff;
+    background: #58c5f5;
     position: relative;
     
 }
@@ -33,7 +33,7 @@ position: relative;
 margin-top:10px;
 z-index: 99;
 font-size: 30px;
-left: 10px;
+left: 0;
 color:#8f6a45;
 cursor: pointer;
 }
@@ -55,11 +55,11 @@ border-bottom:1px solid #555;
 @media screen and (min-width: 800px) {   
     
 .nav{
-    width:40vw;
+    width:50vw;
     -webkit-box-shadow:none;
     box-shadow:none;
     position: absolute;
-    left:75vw;
+    left:50vw;
     -webkit-transition: none; 
     -o-transition: none; 
     transition: none;
@@ -84,8 +84,7 @@ margin-top: -50px;
 
 }
 .menu-list{
-   list-style: none; 
-   
+   list-style: none;  
 }
 .menu-link{  
 text-decoration: none;

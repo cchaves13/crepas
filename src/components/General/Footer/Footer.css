@@ -1,6 +1,6 @@
 .main-footer {
     color: black;    
-    background-color: #aee6ff;
+    background-color: #58c5f5;
     padding-top: 1em;
     position: relative;
     width: 100%;
@@ -21,6 +21,14 @@
     margin: 7%;
     margin-top: 0%;
     margin-block-end: 0%;
+}
+.col1{
+list-style: none;
+margin-left: 50px;
+}
+.col2{
+margin-left: 400px;
+margin-top: -90px;
 }
 
 .title{
