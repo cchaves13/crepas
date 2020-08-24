@@ -13,7 +13,7 @@ class Slideshow extends Component {
             <div id="slideshowContainer">
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
-                        <div className="swiper-slide">Slide 1</div>
+                        <div className="swiper-slide"> <img src="/imgs/Monday.jpg"></img> </div>
                         <div className="swiper-slide">Slide 2</div>
                         <div className="swiper-slide">Slide 3</div>
         

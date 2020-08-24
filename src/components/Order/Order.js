@@ -16,7 +16,7 @@ class Order extends Component {
         var listCrepas= [
           {Imagen:"Monday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate y caramelo",Precio:2000}, 
           {Imagen:"wednesday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000},  
-          {Imagen:"sunday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000}, 
+          {Imagen:"thursday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000}, 
           {Imagen:"tuesday",Relleno:"Nutella", Frutas:"Melocoton, Fresa y Kiwi", Toppings:"Chocolate",Precio:2000}
         ];
         return  listCrepas.map((crepas, i)=> 
