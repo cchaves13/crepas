@@ -14,8 +14,8 @@ class Crepas extends Component {
     render() {
         return (
             <div id="crepa" className="crepa">
-                <div>
-                    <img src="./logo192.png"></img>
+                <div >
+                    <img className="crepa-imgs" src={"/imgs/"+this.props.CrepasProps.Imagen+".jpg"}></img>
                 </div>
                 <div className="box-description">
                     <div id="crepaDescripcion">
@@ -34,7 +34,7 @@ class Crepas extends Component {
                         </div>
                         <div className="detalles">                            
                             <h5>Precio:</h5>
-                            <p>{this.props.CrepasProps.Precio}</p>
+                            <p>₡{this.props.CrepasProps.Precio}</p>
                         </div>          
                     </div>
                     <div id="boxBtn">

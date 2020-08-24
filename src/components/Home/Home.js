@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './home.css'
 import Schedule from '../Schedule/Schedule';
+import Slideshow from './Slideshow/Slideshow';
 
 class Home extends Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class Home extends Component {
     render() {
         return (
             <div id="homePage">
+                <Slideshow></Slideshow>
                 <Schedule></Schedule>
             </div>
             

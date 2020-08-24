@@ -1,5 +1,7 @@
 #order h1{
     color: cadetblue;
+    text-align: center;
+    
 }
  
 
@@ -9,7 +11,5 @@
 
 
   @media only screen and (max-width: 680px) {
-    #boxeCrepa{
-        
-    }
+    
   }
