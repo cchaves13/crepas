@@ -2,42 +2,37 @@
     margin: auto;
     margin-block-end: 8%;
     margin-left: 5%;
-    font-family:algerian;  
     font-size: 40px;
     display: block;
     
 }
-.flex-container {
-    display: flex;
-  flex-wrap: nowrap;
+.box-general{
+    text-align: center;
+}
 
-}
-    
-  
-.container1{
+#container1{
     background-color:#F9B4E1;
-    width: 500px;
-    margin: 50px;
-    text-align: center;
-    line-height: 60px;
-    font-size: 30px;
-    
 }
-.container2{
+#container2{
     background-color: #DEA365;
-    width: 500px;
-    margin: 50px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-    
 }
-.container3{
+#container3{
     background-color: #f6f983;
-    width: 500px;
-    margin: 50px;
-    text-align: center;
-    line-height: 60px;
-    font-size: 30px;
-    
 }
+.container-cajitas{
+    width:25%;
+    height: 200px;
+    display:inline-block;
+    margin: 15px;
+    padding: 1%;
+}
+
+
+@media only screen and (max-width: 680px) {
+    .container-cajitas{
+        width:85%;
+        display: block;
+        margin: 10px auto;
+    }
+    
+  }
