@@ -20,6 +20,8 @@
     padding: 2%;
     color: #6C1A0F;
     padding-top: 20%;
+    font-family: arial;
+    font-style: italic;
 }
 #container-draw2{
     width: 70%;
@@ -39,6 +41,8 @@
     padding: 2%;
     color: #e3e9e3;
     padding-top: 15%;
+    font-family: arial;
+    font-style: italic;
 }
 #container-draw3{
     width: 70%;
@@ -58,4 +62,6 @@
     padding: 2%;
     color: #c7bf91;
     padding-top: 15%;
+    font-family: arial;
+    font-style: italic;
 }
