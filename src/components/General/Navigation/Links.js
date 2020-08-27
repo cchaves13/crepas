@@ -1,7 +1,7 @@
 
 export const navegation = [
     {
-        label: 'Home',
+        label: 'Inicio',
         url:'/'
     },
     {
@@ -13,7 +13,7 @@ export const navegation = [
         url:'/ordena'
     },
     {
-        label: 'Confirma',
+        label: 'Confirmar',
         url:'/confirmacion'
     },
 
