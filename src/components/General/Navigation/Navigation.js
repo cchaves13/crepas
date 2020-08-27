@@ -24,12 +24,13 @@ class Navigation extends Component{
         const{isSidebarOpen}=this.state;
         
         return (
-            <div className="container">  
+            <div className="container">
+                  
           <div className="menu-button" onClick={this.handleMenuButtonClick}>
               <i className="fas fa-bars"></i>
            </div>  
            {/*Sidebar*/} 
-           <img className="imagen" src="imagenes/logo2.jpg"></img>
+           <img className="imagen" src="imagenes/logo2.jpeg"></img>
            
            { navegation.length &&(
                <nav className={`nav ${isSidebarOpen ? 'show':''}` }>

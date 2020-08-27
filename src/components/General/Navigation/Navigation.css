@@ -1,16 +1,17 @@
 .container{
     width:auto;
-    height:50px;
+    height:70px;
     background: #58c5f5;
     position: relative;
     
 }
-.imagen{ 
-    width: 70px;
-    height: 50px;
-    margin-top:-300px;
-    margin-left: 80%;
-    }
+.imagen{
+    width: 17%;
+    height: 60px;
+    margin-top: -33px;
+    margin-left: 37px;
+    border-radius: 60%;
+}
 .nav{
     width:70vw;
     -webkit-box-shadow:1px 1px #888;
@@ -70,10 +71,11 @@ border-bottom:1px solid #555;
 left: -80px;
 }
 .imagen{
-width: 100px;
-height: 50px;
+width: 7%;
+height: 70px;
 margin-top: 0px;
-margin-left: 50px;
+margin-left: 15px;
+border-radius: 60%;
 }
 .menu-items{
 display: flex;

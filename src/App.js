@@ -19,7 +19,9 @@ class App extends Component {
   render() {
     return (
       <div className= "content-wrap"> 
+    
       <Router>
+      
       <div>
         <Navigation></Navigation>
         {/* A <Switch> looks through its children <Route>s and
