@@ -12,31 +12,46 @@ class Schedule extends Component {
 
     render() {
         return (
-                <div className="flex-container">
-                    <div  className="container1" >
-                     <h1 className="titulo" >Express</h1>
-                         <p>Servicio Express gratis <br></br>
-                             5pm a 7pm.<br></br>
-                            Después de las 7pm a 9:30 pm <br></br>express lo realiza Pineapple
-                         </p>
+                <div className="box-general">
+                    <div id="container1" className="container-cajitas" >
+                        <div>
+                            <h1 className="titulo" >Express</h1>
+                        </div>
+                        <div>
+                            <p>Servicio Gratis de 5:00 pm a 7:00 pm.
+                            <br></br><br></br>
+                            Servicio Pineapple de 7:00 pm a 9:30 pm 
+                            </p>
+                        </div>
                     </div>
-                        <div className="container2">
-                        <h1 className="titulo">Pago</h1>
-                        <p> 
-                        Efectivo <br></br>
-                        Sinpe móvil
-                         </p>
+                     <div id="container2" className="container-cajitas">
+                         <div>
+                            <h1 className="titulo">Pagos</h1>
+                         </div>
+                         <di>
+                            <p> 
+                                Efectivo 
+                                <br></br><br></br>
+                                Sinpe móvil
+                            
+                            </p>
+                         </di>
+                        
+                    </div>
+                    <div id="container3" className="container-cajitas">
+                        <div>
+                            <h1 className="titulo">Horario</h1>
                         </div>
-                        <div className="container3">
-                        <h1 className="titulo" >Horario</h1>
-                        <p> 
-                        De  Lunes   a  Viernes  
-                        de  5:00pm a 9:30pm<br></br><br></br>
-                        Sabados y Domingos 
-                        de 2:00pm a 9:30pm
-                        </p>
+                        <div>
+                            <p> 
+                                De Lunes a Viernes de  5:00pm a 9:30pm<br></br><br></br>
+                                Sábados y Domingos de 2:00pm a 9:30pm
+                            </p>
+                        </div>
+                        
                        
-                        </div>
+                    </div>
+                
                 
                 </div>
                  

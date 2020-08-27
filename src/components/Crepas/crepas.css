@@ -4,25 +4,17 @@
  
 .crepa {
     height: 40%;
-    margin: 1px;
     background-color: #c2905bff;
     border-radius: 7px 7px 7px 7px;
-    -moz-border-radius: 7px 7px 7px 7px;
     -webkit-border-radius: 7px 7px 7px 7px;
      border: 10px solid #825930;
-     padding: 1%; margin: auto;
+     padding: 1%; 
      display:inline-block;
      width: 25%;
      margin: 15px;
 }
-
-.crepa-imgs{
-    width: 75%;
-}
-
-
 @media only screen and (max-width: 680px) {
-    #crepa {
+    .crepa {
         width:85%;
         display: block;
         margin:auto;
@@ -30,6 +22,11 @@
     
     }
   }
+
+.crepa-imgs{
+    width: 75%;
+}
+
 .box-description{
     width: 90%;
     padding: 1%;
