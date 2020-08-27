@@ -13,7 +13,7 @@ class Crepas extends Component {
 
     render() {
         return (
-            <div id="crepa" className="crepa">
+            <div  className="crepa">
                 <div >
                     <img className="crepa-imgs" src={"/imgs/"+this.props.CrepasProps.Imagen+".jpg"}></img>
                 </div>

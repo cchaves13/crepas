@@ -44,13 +44,30 @@ margin: 0;
 }
 .menu-list{
    list-style: none; 
+   background-color: rgb(116, 62, 24);
+   color: dodgerblue;
+   margin-right: 10px;
+   margin-top: 20px;
+   font-family: Arial;
+   font-size: 13px;
+   border: 2px solid rgb(116, 62, 24);
+   border-radius: 20px;
+   font-weight: bold;
+   
+   
 }
 .menu-link{
 text-decoration: none;
-color:#555;
+color: #fff;
 display: flex;
 padding:10px 16px;
-border-bottom:1px solid #555;
+}
+
+.menu-link:hover{
+    background-color: #fff;
+    color: rgb(116, 62, 24);
+    border-radius: 20px;
+    
 }
 
 @media screen and (min-width: 800px) {   
@@ -90,10 +107,10 @@ margin-top: -50px;
 }
 .menu-link{  
 text-decoration: none;
-color:#555;
+color:#ffff;
 display: flex;
 padding:5px 50px;
-border-bottom:2px  solid #555;
+
 }
   }
 
