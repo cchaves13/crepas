@@ -12,10 +12,13 @@ class Crepas extends Component {
     }
 
     render() {
+        const divStyle = {
+            backgroundImage: 'url('+'/imgs/' + this.props.CrepasProps.Imagen +'.jpg'+ ')' };
         return (
             <div  className="crepa">
-                <div >
-                    <img className="crepa-imgs" src={"/imgs/"+this.props.CrepasProps.Imagen+".jpg"}></img>
+                
+                <div style={divStyle} className="crepa-imgs" >
+                   {/**<img className="crepa-imgs" src={"/imgs/"+this.props.CrepasProps.Imagen+".jpg"}></img> */} 
                 </div>
                 <div className="box-description">
                     <div id="crepaDescripcion">

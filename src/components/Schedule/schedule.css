@@ -15,13 +15,13 @@
 }
 
 #container1{
-    background-color:#F9B4E1;
+    background-image: url("/imgs/cuadro1.png");
 }
 #container2{
-    background-color: #DEA365;
+    background-image: url("/imgs/cuadro2.png");
 }
 #container3{
-    background-color: #f6f983;
+    background-image: url("/imgs/cuadro3.png");
 }
 .container-cajitas{
     width:25%;
@@ -29,14 +29,23 @@
     display:inline-block;
     margin: 15px;
     padding: 1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 3px 3px;
+
 }
 
 
-@media only screen and (max-width: 680px) {
-    .container-cajitas{
-        width:85%;
+
+@media only screen and (max-width: 780px) {
+    .container-cajitas {
+        width:93%;
         display: block;
         margin: 10px auto;
+        background-repeat: no-repeat;
     }
+  
     
   }
+
+  

@@ -73,17 +73,18 @@ padding:10px 16px;
 @media screen and (min-width: 800px) {   
     
 .nav{
-    width:50vw;
+    width:30vw;
     -webkit-box-shadow:none;
     box-shadow:none;
     position: absolute;
-    left:50vw;
+    left:49vw;
     -webkit-transition: none; 
     -o-transition: none; 
     transition: none;
     margin-left: 22px;
     background-color: #58c5f5;
 }
+
 .menu-button i{
     display: none;
 left: -80px;
