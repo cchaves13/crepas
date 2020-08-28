@@ -30,7 +30,7 @@ class Navigation extends Component{
               <i className="fas fa-bars"></i>
            </div>  
            {/*Sidebar*/} 
-           <img className="imagen" src="imagenes/logo2.jpeg"></img>
+           <a href="/"><img className="imagen" src="imagenes/logo2.jpeg"></img></a>
            
            { navegation.length &&(
                <nav className={`nav ${isSidebarOpen ? 'show':''}` }>
