@@ -5,11 +5,7 @@ export const navegation = [
         url:'/'
     },
     {
-        label: 'Crear Crepa',
-        url:'/otrapagina'
-    },
-    {
-        label: 'Ordenar',
+        label: 'Crepas',
         url:'/ordena'
     },
     {
