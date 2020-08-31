@@ -5,7 +5,7 @@ import "./Footer.css"
 const Footer = () => {
    return(
        <div className="main-footer">            
-           <div className="row">
+           <div>
                {/* Column1 */}
                    <div className= "col">
                         <h4 className="title">Ubicación </h4>  
@@ -16,19 +16,17 @@ const Footer = () => {
 
                {/* Column2 */}
                    <div className= "col">
-                   <h4 className= "title">Contactenos </h4>
+                   <h4 className= "title">Contáctenos </h4>
                    <ul className="list-unstyled">
                    <li>
                         <a target="_blank" href=" https://api.whatsapp.com/send?phone=50683710654text=prueba">
-                          <img id= "img3"src= "./imagenes/whatsapp.ico"/>&nbsp;86598745
+                          <img id= "img3"src= "./imagenes/whatsapp.ico"/>&nbsp; 86598745
                         </a>   
                         <a target="_blank" href="tel:+506-28569945">
-                         <img id= "img5"src= "./imagenes/phon.ico"/>&nbsp;28569945
+                          <img id= "img5"src= "./imagenes/phon.ico"/>&nbsp; 28569945
                         </a>                                                  
-                     </li>
-                                                 
-                   </ul>
-                                                              
+                     </li>                                                 
+                   </ul>                                                              
                     </div>
 
                      {/* Column3*/}
