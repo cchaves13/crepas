@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './crepas.css'
+import Popup from './../Crepas/Popup/Popup';
 
 
 class Crepas extends Component {
@@ -7,9 +8,12 @@ class Crepas extends Component {
         super(props)
 
         this.state = {
-
+            showPopup: false
         }
     }
+    togglePopup() {  
+        this.setState({ showPopup: !this.state.showPopup });  
+    } 
 
     render() {
         const divStyle = {
@@ -41,7 +45,11 @@ class Crepas extends Component {
                         </div>          
                     </div>
                     <div id="boxBtn">
-                        <button className="crepas-btn">Añadir al Pedido </button>
+                        <button className="crepas-btn" onClick={this.togglePopup.bind(this)}>Añadir al Pedido </button>
+                        {this.state.showPopup?
+                        <Popup
+                            text='Click "Close Button" to hide popup'closePopup={this.togglePopup.bind(this)}>
+                        </Popup>: null}
                     </div>
 
                 </div>
