@@ -3,6 +3,7 @@
     height:70px;
     background: #58c5f5;
     position: relative;
+  
     
 }
 .imagen{
@@ -25,6 +26,7 @@
     -webkit-transition: left 0.3s ease-in; 
     -o-transition: left 0.3s ease-in; 
     transition: left 0.3s ease-in;
+    
 }
 .nav.show{  
 left:0;

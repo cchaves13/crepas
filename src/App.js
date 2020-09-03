@@ -13,6 +13,7 @@ import Order from './components/Order/Order';
 import Navigation from './components/General/Navigation/Navigation';
 import Footer from './components/General/Footer/Footer';
 import Confirmacion from './components/Confirmacion/Confirmacion';
+import CrearC from './components/Crear/CrearC';
 
 
 class App extends Component {
@@ -38,6 +39,9 @@ class App extends Component {
           
           <Route path="/confirmacion">
            <Confirmacion></Confirmacion>
+          </Route>
+          <Route path="/crear">
+           <CrearC></CrearC>
           </Route>
 
           <Route path="/">
