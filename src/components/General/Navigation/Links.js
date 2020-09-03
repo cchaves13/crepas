@@ -10,7 +10,7 @@ export const navegation = [
     },
     {
         label: 'Crear Crepas',
-        url:'/ordena'
+        url:'/crear'
     },
     {
         label: 'Confirmar',
