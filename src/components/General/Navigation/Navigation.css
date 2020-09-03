@@ -44,16 +44,17 @@ padding: 0;
 margin: 0;
 }
 .menu-list{
-   list-style: none; 
-   background-color: rgb(116, 62, 24);
-   color: dodgerblue;
-   margin-right: 33px;
-   margin-top: 10px;
-   font-family: Arial !important;
-   font-size: 20px;
-   border: 2px solid rgb(116, 62, 24);
-   border-radius: 20px;
-   font-weight: bold;
+    list-style: none;
+    /* width: 49%; */
+    background-color: rgb(116, 62, 24);
+    color: dodgerblue;
+    margin-right: 31px;
+    margin-top: 19px;
+    font-family: Arial !important;
+    font-size: 20px;
+    border: 2px solid rgb(116, 62, 24);
+    border-radius: 20px;
+    font-weight: bold;
    
    
 }
@@ -73,15 +74,12 @@ padding:10px 16px;
 @media screen and (min-width: 800px) {   
     
 .nav{
-    width:30vw;
-    -webkit-box-shadow:none;
-    box-shadow:none;
+    width: 54%;
+    box-shadow: none;
     position: absolute;
-    left:49vw;
-    -webkit-transition: none; 
-    -o-transition: none; 
+    left: 49vw;
     transition: none;
-    margin-left: 22px;
+    margin-left: -111px;
     background-color: #58c5f5;
 }
 
@@ -97,11 +95,11 @@ margin-left: 35px;
 border-radius: 60%;
 }
 .menu-items{
-display: flex;
-flex-wrap: nowrap;
-padding: 0px;
-margin: 0px;
-margin-top: -43px;
+    display: flex;
+    height: 58px;
+    width: 121%;
+    margin-left: -91px;
+    margin-top: -52px;
 
 }
 .menu-list{

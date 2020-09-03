@@ -9,6 +9,10 @@ export const navegation = [
         url:'/ordena'
     },
     {
+        label: 'Crear Crepas',
+        url:'/ordena'
+    },
+    {
         label: 'Confirmar',
         url:'/confirmacion'
     },
