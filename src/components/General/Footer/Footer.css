@@ -1,12 +1,15 @@
 .main-footer {  
-    background-color: #58c5f5;
+    background-color: #4EC2B3;
     padding-top: 1em;
     position: relative;
     width: 100%;
+    
 } 
 
 .row1{  
   text-align: center;
+  color: white;
+  
 }
 
 .col{
@@ -16,7 +19,8 @@
     text-align: center;
     line-height: 40px;
     font-size: 100%;
-    display: inline-block;   
+    display: inline-block; 
+    color: white;  
 }
 #img1{
     margin-top: 10px;
@@ -49,10 +53,11 @@
 }
 .title{ 
 
- font-size: 20px;
+ font-size: 25px;
  margin-top: -20px;
  line-height: 40px;
  text-align: center;
+ font-family: 'Amatic SC';
 }
 a{ 
     text-decoration: none;

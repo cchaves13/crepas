@@ -26,22 +26,22 @@ class Crepas extends Component {
                 </div>
                 <div className="box-description">
                     <div id="crepaDescripcion">
-                    <h2>Descripción</h2>
+                    <h1>{this.props.CrepasProps.Nombre}</h1>
                         <div className="detalles">                            
-                            <h5>Relleno:</h5>
-                            <p>{this.props.CrepasProps.Relleno}</p>
+                            <h4>Relleno:</h4>&nbsp;&nbsp;
+                            <h4>{this.props.CrepasProps.Relleno}</h4>
                         </div>
                         <div className="detalles">                            
-                            <h5>Frutas:</h5>
-                            <p>{this.props.CrepasProps.Frutas}</p>
+                            <h4>Frutas:</h4>&nbsp;&nbsp;
+                            <h4>{this.props.CrepasProps.Frutas}</h4>
                         </div>
                         <div className="detalles">                            
-                            <h5>Toppings:</h5>
-                            <p>{this.props.CrepasProps.Toppings}</p>
+                            <h4>Toppings:</h4>&nbsp;&nbsp;
+                            <h4>{this.props.CrepasProps.Toppings}</h4>
                         </div>
                         <div className="detalles">                            
-                            <h5>Precio:</h5>
-                            <p>₡{this.props.CrepasProps.Precio}</p>
+                            <h4>Precio:</h4>&nbsp;&nbsp;
+                            <h4>₡&nbsp;{this.props.CrepasProps.Precio}</h4>
                         </div>          
                     </div>
                     <div id="boxBtn">

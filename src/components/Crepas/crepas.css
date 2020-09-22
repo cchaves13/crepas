@@ -4,14 +4,11 @@
  
 .crepa {
     height: 40%;
-    background-color: #c2905bff;
-    border-radius: 7px 7px 7px 7px;
-    -webkit-border-radius: 7px 7px 7px 7px;
-     border: 10px solid #825930;
-     padding: 1%; 
-     display:inline-block;
-     width: 25%;
-     margin: 15px;
+    border: 4px solid #3ea396;
+    padding: 1%;
+    display: inline-block;
+    width: 25%;
+    margin: 15px;
 }
 @media only screen and (max-width: 680px) {
     .crepa {
@@ -25,20 +22,20 @@
 
 .crepa-imgs{
     width: 100%;
-    height: 314px;
+    height: 251px;
     display: block;
-    background-position: -7px -68px;
+    background-position: -2px -67px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .box-description{
-    width: 90%;
-    padding: 1%;
+    width: 92%;
 }
 .detalles{
     display: flex;
     margin-top: 5px;
+    color: white;
 }
 
 .detalles h5{
@@ -46,20 +43,31 @@
 }
 #crepaDescripcion{
     width: 100%;
-    background-color: white;
-    border-radius: 24px;    
-    border: 2px solid #825930;
+    background-color: #e29d08f3;
     text-align: center;
-    padding: 10px;
+    padding: 13px;
   
 }
 
 .crepas-btn{
-    background-color: red;
-    padding: 10px;
+    background-color: #4EC2B3;
+    padding: 1px;
+    width: 104%;
     color: #fff;
     cursor: pointer;
+    height: 57px;
+    font-family: 'Amatic SC';
+    font-size: 37px;
+    border: none;
 }
+.crepas-btn:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+    transition: all 0.5s;
+}
+
 #boxBtn{
-    padding: 2%;
+    padding: 4%;
+    width: 98%;
 }

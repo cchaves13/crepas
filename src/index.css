@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
 
 body, h1, h2, h3, h4, h5, p, div{
   margin: 0;
 }
 h1,h2 {
-  font-family: 'Pacifico';
+  font-family: 'Amatic SC', cursive;
 }
 
 h3,h4,h5,h6,p, div {

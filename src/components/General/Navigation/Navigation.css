@@ -1,7 +1,7 @@
 .container{
     width:auto;
     height:70px;
-    background: #58c5f5;
+    background: #4EC2B3;
     position: relative;
   
     
@@ -47,30 +47,24 @@ margin: 0;
 }
 .menu-list{
     list-style: none;
-    /* width: 49%; */
-    background-color: rgb(116, 62, 24);
-    color: dodgerblue;
     margin-right: 31px;
     margin-top: 19px;
-    font-family: Arial !important;
-    font-size: 20px;
-    border: 2px solid rgb(116, 62, 24);
-    border-radius: 20px;
+    font-family: 'Amatic SC';
+    font-size: 30px;
     font-weight: bold;
    
    
 }
 .menu-link{
 text-decoration: none;
-color: #fff;
+color: rgb(19, 18, 18);
 display: flex;
 padding:10px 16px;
 }
 
 .menu-link:hover{
     background-color: #fff;
-    color: rgb(116, 62, 24);
-    border-radius: 20px; 
+    color: black;
 }
 
 @media screen and (min-width: 800px) {   
@@ -82,7 +76,7 @@ padding:10px 16px;
     left: 49vw;
     transition: none;
     margin-left: -111px;
-    background-color: #58c5f5;
+    background-color:#4EC2B3;
 }
 
 .menu-button i{

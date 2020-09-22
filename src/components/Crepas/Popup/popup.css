@@ -21,15 +21,22 @@
 }
 
 .btn-Popup{
-  background-color: red;
-    padding: 5px;
-    color: #fff;
-    margin-top: 45px;
-    cursor: pointer;
-    margin-left: 40px;
-    margin-right: 40px;
+  background-color: #3ea396;
+  padding: 1px;
+  color: #fff;
+  margin-top: 45px;
+  width: 32%;
+  cursor: pointer;
+  margin-left: 39px;
+  margin-right: 39px;
+  font-family: 'Amatic SC';
+  font-size: 33px;
 }
-
+.btn-Popup:hover{
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
 .quant-Crepa{
   width: 6%;
   height: 20px;

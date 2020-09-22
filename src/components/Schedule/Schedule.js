@@ -6,60 +6,83 @@ class Schedule extends Component {
         super(props)
 
         this.state = {
-                 
+
         }
     }
 
     render() {
         return (
+            <div>
                 <div className="box-general">
-                    <div id="container1" className="container-cajitas" >
-                        <div>
-                            <h1 className="titulo" >Express</h1>
-                        </div>
-                        <div>
-                            <p>Servicio Gratis de 5:00 pm a 7:00 pm.
-                            <br></br><br></br>
-                            Servicio Pineapple de 7:00 pm a 9:30 pm 
-                            </p>
+                    <div className="box">
+                        <h2 style={{ textAlign: 'center' }}> Para que no salgas de casa</h2>
+                        <br></br>
+                        <h2 style={{ textAlign: 'center' }}>
+                            <span> Las crepas de Vale</span> le ofrece servicio Express.
+                        </h2>
+                        <br></br>
+                        <h2 style={{ textAlign: 'center' }}>
+                            De 5:00 pm a 7:00pm el sevicio express es Gratis.
+                        </h2>
+                        <br></br>
+                        <h2 style={{ textAlign: 'center' }}>De 7:00pm a 9:30 pm el servio express lo realiza Pineapple</h2>
+                    </div>
+                    <div className="box btn-ver-crepas">
+                        <div className="btn-content">
+                            <hr></hr>
+                            <h2>
+                                <a href='/ordena'>Elige tu  <br></br><span>Crepa</span> </a>
+                            </h2>
+                            <hr></hr>
                         </div>
                     </div>
-                     <div id="container2" className="container-cajitas">
-                         <div>
-                            <h1 className="titulo">Pagos</h1>
-                         </div>
-                         <di>
-                            <p> 
-                                Efectivo 
-                                <br></br><br></br>
-                                Sinpe móvil
-                            
-                            </p>
-                         </di>
-                        
-                    </div>
-                    <div id="container3" className="container-cajitas">
-                        <div>
-                            <h1 className="titulo">Horario</h1>
-                        </div>
-                        <div>
-                            <p> 
-                                De Lunes a Viernes de  5:00pm a 9:30pm<br></br><br></br>
-                                Sábados y Domingos de 2:00pm a 9:30pm
-                            </p>
-                        </div>
-                        
+                </div>
+                <div className="horario-box">
+                    <div className="crepas"></div>
+                    <div className="info">
+                       <h2> Nuestro Horario</h2>
+                       <br></br>
+                       <br></br>
+                       <br></br>
+                       <h2> De Lunes a Viernes de 5:00pm a 9:30pm</h2>
+                       <br></br>
+                       <br></br>
+                       <h2> Sábados y Domingos de 2:00pm a 9:30pm</h2>
                        
                     </div>
-                
-                
+                    <div className="crepas"></div>
                 </div>
-                 
-            
-                
+                <div className="box-general">
+                <div className="box btn-ver-crepas">
+                        <div className="btn-content">
+                            <hr></hr>
+                            <h2>
+                            <a href='/crear'>Diseña tu  <br></br><span>Crepa</span> </a>
+                            </h2>
+                            <hr></hr>
+                        </div>
+                    </div>
+                    <div className="box">
+                    <h2 style={{ textAlign: 'center' }}>
+                            <span> Las crepas de Vale</span> te ofrece dos métodos de pago
+                        </h2>
+                        <h2 style={{ textAlign: 'center' }}> Para que cancelar tu compra fácilmente </h2>
+                        <br></br>
+                        <br></br>
+                        <h2 style={{ textAlign: 'center' }}>
+                            Efectivo
+                        </h2>
+                        <br></br>
+                        <h2 style={{ textAlign: 'center' }}>Sinpe móvil</h2>
+                    </div>
+                </div>
+            </div>
+
+
+
         )
     }
-    
+
 
 }
 

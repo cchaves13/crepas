@@ -1,4 +1,4 @@
- .titulo{
+ /* .titulo{
     margin: auto;
     margin-block-end: 8%;
     margin-left: 5%;
@@ -12,6 +12,21 @@
     text-align: center;
     padding-bottom: 5%;
     padding-top: 5%;
+    width: 100%;
+    height: 400px;
+}
+
+.containerExpress{
+    width: 30%;
+    height: 400px;
+    background-color: brown;
+    display: inline-block;
+}
+.containerVerCreapas{
+    width: 30%;
+    height: 400px;
+    background-color: green;
+    display: inline-block;
 }
 
 #container1{
@@ -48,4 +63,86 @@
     
   }
 
-  
+   */
+
+   .box-general{      
+       width: 95%;
+       display: block;
+       margin: 30px auto 30px auto;
+   }
+
+   .box{
+       display: inline-block;
+       width: 49%;
+       height: 300px;
+       vertical-align: top;
+       padding: 30px;
+       box-sizing: border-box;
+      font-size: 20px;
+       position: relative;
+       transition: all 0.5s;
+   }
+
+   .box:hover{
+    font-size: 22px;    
+   }
+
+   .box span{
+       color:#4EC2B3;
+   }
+
+   .box:nth-child(1){
+       margin-right: 2%;
+   }
+
+   .btn-ver-crepas{
+       background-color: #4EC2B3;
+   }
+
+   .btn-content{
+       width: 60%;
+       display: block;
+       margin: auto;
+       text-align: center;
+       position: absolute;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       top: 50%;
+       cursor: pointer;
+      
+   }
+
+   .btn-content h2{
+       margin: 50px 0px;
+   }
+
+   .btn-content span{
+       color: white;
+   }
+
+   .horario-box{
+       display: block;
+       margin-top: 20px;
+   }
+
+   .horario-box div{
+       display: inline-block;
+       width: 33%;
+   }
+
+   .horario-box .crepas{
+       height: 400px;
+       background-size: cover;
+       background-image: url('/imgs/Monday.jpg');
+   }
+
+   .horario-box .info{
+       height: 400px;
+       background-color: #e29d08f3;
+       vertical-align: top;
+       color: #fff;
+       font-size: 20px;
+       text-align: center;
+       padding: 30px;
+       box-sizing: border-box;
+   }
