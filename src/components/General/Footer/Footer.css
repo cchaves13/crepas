@@ -1,8 +1,10 @@
 .main-footer {  
     background-color: #4EC2B3;
-    padding-top: 1em;
     position: relative;
+    padding: 13px 0 4px;
     width: 100%;
+    z-index: 5000;
+    bottom: 0;
     
 } 
 
