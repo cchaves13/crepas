@@ -14,6 +14,7 @@ import Navigation from './components/General/Navigation/Navigation';
 import Footer from './components/General/Footer/Footer';
 import Confirmacion from './components/Confirmacion/Confirmacion';
 import CrearC from './components/Crear/CrearC';
+import CrearCrepa from './components/Crear/CrearCrepa';
 
 
 class App extends Component {
@@ -41,7 +42,7 @@ class App extends Component {
            <Confirmacion></Confirmacion>
           </Route>
           <Route path="/crear">
-           <CrearC></CrearC>
+            <CrearCrepa></CrearCrepa>
           </Route>
 
           <Route path="/">
