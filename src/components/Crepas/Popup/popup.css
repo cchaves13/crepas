@@ -24,11 +24,11 @@
   background-color: #3ea396;
   padding: 1px;
   color: #fff;
-  margin-top: 45px;
+  margin-top: 43px;
   width: 32%;
   cursor: pointer;
-  margin-left: 39px;
-  margin-right: 39px;
+  margin-left: 32px;
+  margin-right: 24px;
   font-family: 'Amatic SC';
   font-size: 33px;
 }
@@ -48,10 +48,10 @@
 
 @media only screen and (max-width: 680px){
   .inner {  
-    left: 5%;
+    left: 3%;
     right: 8%;
     top: 31%;
-    bottom: 45%;
+    bottom: 34%;
     padding: 6px;
   }
   .quant-Crepa{
