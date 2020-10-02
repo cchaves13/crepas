@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 import React, { Component } from 'react'
@@ -9,11 +9,10 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/Home/Home';
-import Order from './components/Order/Order';
+import Order from './components/Crepas/Order/Order';
 import Navigation from './components/General/Navigation/Navigation';
 import Footer from './components/General/Footer/Footer';
 import Confirmacion from './components/Confirmacion/Confirmacion';
-import CrearC from './components/Crear/CrearC';
 import CrearCrepa from './components/Crear/CrearCrepa';
 
 

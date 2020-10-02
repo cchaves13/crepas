@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './order.css'
-import Crepas from './../Crepas/Crepas'
+import Crepas from '../Crepas'
 
 
 
