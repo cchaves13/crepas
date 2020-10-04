@@ -39,20 +39,12 @@ export default class Crearcrepa extends Component {
       }
       generateFrutas(){       
         return  this.state.ingredientes.frutas.map((fruta, i)=> 
-           <Ingredientes Ingrediente={fruta} CantMax={2} Tipo={"Fruta"} handleClick={this.handleIngredienteClick} key={i} ></Ingredientes>
+           <Ingredientes Ingrediente={fruta} CantMax={3} Tipo={"Fruta"} handleClick={this.handleIngredienteClick} key={i} ></Ingredientes>
         );
       }
       generateToppings(){
-        var listIngredientes= [
-          {Imagen:"Banano",Id:"10"}, 
-          {Imagen:"fresas",Id:"11"},
-          {Imagen:"Banano",Id:"12"}, 
-          {Imagen:"fresas",Id:"13"},
-          {Imagen:"Banano",Id:"14"},
-          {Imagen:"Banano",Id:"15"}
-        ];
-        return  listIngredientes.map((crearC, i)=> 
-           <Ingredientes CrearCProps={crearC} key={i} ></Ingredientes>
+        return  this.state.ingredientes.toppings.map((topping, i)=> 
+           <Ingredientes Ingrediente={topping} CantMax={2} Tipo={"Topping"} handleClick={this.handleIngredienteClick} key={i} ></Ingredientes>
         );
       }
 
@@ -73,8 +65,13 @@ export default class Crearcrepa extends Component {
             ingredientArray= this.state.ingredientes.rellenos;
             ingredient=ingredientArray.find(x=> x.Nombre == element.Nombre);
             quantityChecked = this.state.ingredientes.rellenos.filter(x=> x.isChecked).length;
-            
         }
+        if(tipo =="Topping"){
+            ingredientArray= this.state.ingredientes.toppings;
+            ingredient= ingredientArray.find(x=> x.Nombre== element.Nombre);
+            quantityChecked= this.state.ingredientes.toppings.filter(x=> x.isChecked).length;
+        }
+            
         
         console.log({quantityChecked:quantityChecked, ingredient:ingredient});
         if(quantityChecked < cantMax && !ingredient.isChecked){
@@ -89,6 +86,9 @@ export default class Crearcrepa extends Component {
             }
             if(tipo =="Relleno"){
                 this.setState({ingredientes:{rellenos:[...ingredientArray]}})
+            }
+            if(tipo=="Topping"){
+                this.setState({ingredientes:{toppings:[...ingredientArray]}})
             }
         }else{
             alert("Maximo 3 Frutas");
@@ -106,7 +106,7 @@ export default class Crearcrepa extends Component {
                         <h1>Elije el Relleno</h1>
                         <div className="contenedor-Relleno">
                             {
-                               this.generateRelleno()
+                               //this.generateRelleno()
                             }
                         </div>
                        
@@ -115,7 +115,7 @@ export default class Crearcrepa extends Component {
                         <h1>Elije la Fruta</h1>
                         <div className="contenedor-Relleno">
                             {
-                                this.generateFrutas()
+                               // this.generateFrutas()
                             }
                         </div>
                     </div>
@@ -123,7 +123,7 @@ export default class Crearcrepa extends Component {
                         <h1>Elije el Topping</h1>
                         <div className="contenedor-Relleno">
                             {
-                               /* this.generateToppings()*/
+                               this.generateToppings()
                             }
                         </div>
                     </div>
