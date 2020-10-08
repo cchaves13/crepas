@@ -3,4 +3,55 @@
 }
 .contenedor-Relleno{
     text-align: center;
+} 
+#crearCrepas span{
+    color:#e29d08f3;
+}
+.quantity-container{
+    margin-bottom: 15px;
+    margin-top: 14px; 
+    position: relative;
+    display: inline-block;
+    height: 55px;  
+}
+.quantity-container input{
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+    vertical-align: top;
+}
+.math-icon{
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    cursor: pointer;
+} 
+.plus{
+    background-image: url('/imgs/plus.svg');  
+    margin-right: 13px;
+    margin-left: 16px;    
+}
+.minus{            
+    background-image: url('/imgs/minus.svg');
+    margin-right: 15px;
+    margin-left: 126px;
+}
+.crear-crepas-btn{
+    background-color: #3ea396;
+    padding: 1px;
+    color: #fff;
+    margin-top: 4px;
+    margin: 10px;
+    width: 59%;
+    cursor: pointer;
+    margin-left: 82px;
+    margin-right: 10px;
+    font-family: 'Amatic SC';
+    font-size: 29px;
+}
+.step-four
+{
+    text-align: center;
+    margin-top: 46px;
 }

@@ -27,12 +27,13 @@ export default class Crearcrepa extends Component {
                     {Nombre:"Kiwi", isChecked:false,},
                     {Nombre:"Manzana", isChecked:false,},
                     {Nombre:"Melocotón", isChecked:false,}]
-            }
+            },
+            Quantity:1 
         }
        
     }
 
-    generateRelleno(){;
+    generateRelleno(){
         return  this.state.ingredientes.rellenos.map((relleno, i)=> 
            <Ingredientes Ingrediente={relleno} CantMax={1} Tipo={"Relleno"} handleClick={this.handleIngredienteClick} key={i} ></Ingredientes>
         );
@@ -55,7 +56,6 @@ export default class Crearcrepa extends Component {
         var ingredient = {};
         var quantityChecked = 0;
 
-        //Falta Aqui
         if(tipo == "Fruta"){
             ingredientArray = this.state.ingredientes.frutas;        
             ingredient = ingredientArray.find(x=> x.Nombre == element.Nombre);        
@@ -72,55 +72,72 @@ export default class Crearcrepa extends Component {
             quantityChecked= this.state.ingredientes.toppings.filter(x=> x.isChecked).length;
         }
             
-        
         console.log({quantityChecked:quantityChecked, ingredient:ingredient});
-        if(quantityChecked < cantMax && !ingredient.isChecked){
-            ingredientArray.map((ingred)=>{
-                if(ingred.Nombre == element.Nombre){
-                    ingred.isChecked = true;
+        if( ingredient.isChecked==true)
+            { 
+                ingredientArray.map((ingred)=>{
+                    if(ingred.Nombre == element.Nombre)
+                    {
+                        ingred.isChecked = false;
+                    }
+                });
+            }
+            else
+            {
+                if(quantityChecked < cantMax ){
+                    ingredientArray.map((ingred)=>{
+                        if(ingred.Nombre == element.Nombre)
+                        {
+                            ingred.isChecked = true;
+                        }
+                    });
                 }
-            });
-            //Falta aqui
+            }
+           
             if(tipo == "Fruta"){
-                this.setState({ingredientes:{frutas:[...ingredientArray]}});
+                 this.setState({ingredientes: {...this.state.ingredientes, frutas:[...ingredientArray]}});
             }
             if(tipo =="Relleno"){
-                this.setState({ingredientes:{rellenos:[...ingredientArray]}})
+                this.setState({ingredientes: {...this.state.ingredientes, rellenos:[...ingredientArray]}});
             }
             if(tipo=="Topping"){
-                this.setState({ingredientes:{toppings:[...ingredientArray]}})
+                this.setState({ingredientes: {...this.state.ingredientes, toppings:[...ingredientArray]}});
             }
+    }
+    
+    handleQuantity = (operation)=>{
+        if(operation == "plus"){
+            this.setState({Quantity:this.state.Quantity +1});
         }else{
-            alert("Maximo 3 Frutas");
+            this.setState({Quantity:this.state.Quantity <= 1 ? 1 : this.state.Quantity -1});
         }
-    }  
+    }
 
     render() {
         return (
            <div id="crearCrepas">
-               <h1>CreandoCrepas</h1>
-
+               <h1 >Diseña tu crepa en tan solo  <span>4</span> pasos</h1>
             <div className="swiper-container">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide">
-                        <h1>Elije el Relleno</h1>
+                        <h2 style={{ textAlign: 'center' }}> <span>Paso 1: </span>Elije tu relleno favorito</h2>
                         <div className="contenedor-Relleno">
                             {
-                               //this.generateRelleno()
+                               this.generateRelleno()
                             }
                         </div>
                        
                     </div>
                     <div className="swiper-slide">
-                        <h1>Elije la Fruta</h1>
+                        <h2 style={{ textAlign: 'center' }}> <span>Paso 2: </span>Elije 3 frutas a tu gusto</h2>
                         <div className="contenedor-Relleno">
                             {
-                               // this.generateFrutas()
+                                 this.generateFrutas()
                             }
                         </div>
                     </div>
                     <div className="swiper-slide">
-                        <h1>Elije el Topping</h1>
+                        <h2 style={{ textAlign: 'center' }}> <span>Paso 3: </span>Elije 2 Toppings preferidos</h2>
                         <div className="contenedor-Relleno">
                             {
                                this.generateToppings()
@@ -128,7 +145,14 @@ export default class Crearcrepa extends Component {
                         </div>
                     </div>
                     <div className="swiper-slide">
-                        <h1>Elije la Cantidad</h1>
+                        <h2 className="step-four"> <span>Paso 4: </span>¿Cuántas crepas de la que creaste quieres?</h2>
+                        <div className="quantity-container">
+                            <span className="math-icon minus" onClick={()=>this.handleQuantity("minus")}></span>
+                            <input value={this.state.Quantity} disabled></input>
+                            <span className="math-icon plus" onClick={()=>this.handleQuantity("plus")}></span>
+                        </div>   
+                            <button className="crear-crepas-btn">Añadir y diseñar otra</button>
+                            <button className="crear-crepas-btn">Pedido Listo</button> 
                     </div>
                 </div>
                 <div className="swiper-pagination"></div>
