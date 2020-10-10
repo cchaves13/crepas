@@ -121,7 +121,7 @@ export default class Crearcrepa extends Component {
                 <div className="swiper-wrapper">
                     <div className="swiper-slide">
                         <h2 style={{ textAlign: 'center' }}> <span>Paso 1: </span>Elije tu relleno favorito</h2>
-                        <div className="contenedor-Relleno">
+                        <div className="contenedor-Ingredientes">
                             {
                                this.generateRelleno()
                             }
@@ -130,7 +130,7 @@ export default class Crearcrepa extends Component {
                     </div>
                     <div className="swiper-slide">
                         <h2 style={{ textAlign: 'center' }}> <span>Paso 2: </span>Elije 3 frutas a tu gusto</h2>
-                        <div className="contenedor-Relleno">
+                        <div className="contenedor-Ingredientes">
                             {
                                  this.generateFrutas()
                             }
@@ -138,7 +138,7 @@ export default class Crearcrepa extends Component {
                     </div>
                     <div className="swiper-slide">
                         <h2 style={{ textAlign: 'center' }}> <span>Paso 3: </span>Elije 2 Toppings preferidos</h2>
-                        <div className="contenedor-Relleno">
+                        <div className="contenedor-Ingredientes">
                             {
                                this.generateToppings()
                             }
@@ -150,9 +150,12 @@ export default class Crearcrepa extends Component {
                             <span className="math-icon minus" onClick={()=>this.handleQuantity("minus")}></span>
                             <input value={this.state.Quantity} disabled></input>
                             <span className="math-icon plus" onClick={()=>this.handleQuantity("plus")}></span>
-                        </div>   
+                        </div>  
+                        <div className="container-btn-crear-crepas">
                             <button className="crear-crepas-btn">Añadir y diseñar otra</button>
                             <button className="crear-crepas-btn">Pedido Listo</button> 
+                        </div> 
+                            
                     </div>
                 </div>
                 <div className="swiper-pagination"></div>

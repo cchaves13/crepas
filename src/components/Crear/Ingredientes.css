@@ -38,6 +38,11 @@ label:before {
 label img {
     transition-duration: 0.2s;
     transform-origin: 50% 50%;
+    height: 67px;
+    margin-bottom: -5px;
+    margin-left: -5px;
+    margin-top: -2px;
+    border: 3px solid #e29d08f3;
 }
 
 :checked + label {
@@ -49,9 +54,23 @@ label img {
   background-color: #e29d08f3;
   transform: scale(1);
 }
-@media only screen and (max-width: 680px){
-  
-label img {
-  height: 65px;
-}
+
+@media screen and (min-width: 800px)
+{
+  .contenedor-Ingrediente {
+    width: 25%;
+    margin: 5px;
+  }
+
+  label img {
+    height: 120px;
+  }
+  label {
+    margin: 10px;
+  }
+  :checked + label {
+    width: 73%;
+  }
+
+
 }
