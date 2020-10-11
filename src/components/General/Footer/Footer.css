@@ -1,4 +1,4 @@
-.main-footer {  
+/* .main-footer {  
     background-color: #4EC2B3;
     position: relative;
     padding: 13px 0 4px;
@@ -83,4 +83,59 @@ a{
         font-size: smaller;
         text-align: center;
       }
+} */
+
+
+footer{
+    background-color: #4EC2B3;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+footer div{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+footer div a{
+    display: inline-block;
+  
+    
+}
+
+footer div a:nth-child(1){
+    margin-right: 20%;
+}
+footer div a:nth-child(2){
+    margin-right: 20%;
+}
+
+footer div a:nth-child(3){
+    margin-right: 20%;
+}
+
+footer p{
+    font-family: 'Amatic SC', cursive;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+@media only screen and (max-width:680px){
+    footer div{
+        width:100%;
+    }
+    footer div a:nth-child(1){
+        margin-right: 10%;
+    }
+    footer div a:nth-child(2){
+        margin-right: 10%;
+    }
+    
+    footer div a:nth-child(3){
+        margin-right: 10%;
+    }
 }

@@ -49,7 +49,7 @@ class App extends Component {
           </Route>
 
         </Switch>
-        {/* <Footer></Footer> */}
+        <Footer></Footer>
       </div>
     </Router>
     </div>
