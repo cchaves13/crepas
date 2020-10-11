@@ -15,9 +15,10 @@ class Popup extends React.Component {
     }else{
         this.setState({Quantity:this.state.Quantity <= 1 ? 1 : this.state.Quantity -1});        
     }    
+    console.log(this.state.Quantity);
   }
 
-  handleOrdenar = ()=>{
+  handleOrdenar = ()=>{    
     this.props.crepa.crepa.Quantity = this.state.Quantity;
     var crepasStorage = JSON.parse(localStorage.getItem('crepas'));
     if(!crepasStorage){

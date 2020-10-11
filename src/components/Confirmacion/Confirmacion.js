@@ -6,11 +6,19 @@ class Confirmacion extends Component{
     constructor(props){
         super(props);
         let localStorageTemp = JSON.parse(localStorage.getItem('crepas'));
-        localStorageTemp.map((x, index)=> {x.Id = index});
-        console.log(localStorageTemp);
-        this.state={
-            crepas:localStorageTemp,            
+        if(localStorageTemp){
+            localStorageTemp.map((x, index)=> {x.Id = index});
+            console.log(localStorageTemp);
+            this.state={
+                crepas:localStorageTemp,            
+            }
+        }else{
+            this.state = {
+                crepas:[]
+            }
         }
+    
+        
     }
 
     calculateTotal = () => {
