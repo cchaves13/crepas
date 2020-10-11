@@ -74,7 +74,15 @@
     margin-right: 30px;
     font-family: 'Amatic SC', cursive;
   }
-  .cantidad-crepas{
-    text-align: center;
+  .cantidad-crepa{
+    text-align: center !important;
+
+  }
+  .cantidad-crepa .math-icon{
+    margin:0 !important;    
+  }
+  .cant-number{
+    display: block;
+    margin: 10px 1px;
   }
   

@@ -58,6 +58,28 @@ class Confirmacion extends Component{
         this.setState({crepas:newCrepasArray});
         localStorage.setItem('crepas', JSON.stringify(newCrepasArray));
     }
+
+    handleQuantity = (operation, element)=>{
+        let crepaArray = this.state.crepas;
+       
+        if(operation == "plus"){
+            crepaArray.map((x)=> {
+                if(x.Id == element.Id){
+                    x.Quantity+= 1;
+                }
+            });            
+            this.setState({crepas:crepaArray});
+            localStorage.setItem('crepas', JSON.stringify(crepaArray));
+
+        }else{
+            crepaArray.map((x)=> {
+                if(x.Id == element.Id){
+                    x.Quantity-= 1;
+                }
+            });            
+            localStorage.setItem('crepas', JSON.stringify(crepaArray));
+        }
+    }
     render(){
         return(
         <div>
@@ -79,7 +101,11 @@ class Confirmacion extends Component{
               <tbody>
                 {this.state.crepas.map(x=> (
                     <tr>
-                        <td className="cantidad-crepa">{x.Quantity}</td>
+                        <td className="cantidad-crepa">
+                        <span className="math-icon plus" onClick={()=>this.handleQuantity("plus",x)}></span>
+                            <span className="cant-number">{x.Quantity}</span>
+                        <span className="math-icon minus" onClick={()=>this.handleQuantity("minus", x)}></span>
+                        </td>
                         <td>
                             {this.generateDescription(x).relleno}
                             <br></br>
