@@ -68,8 +68,9 @@ label img {
 @media screen and (min-width: 800px)
 {
   .contenedor-Ingrediente {
-    width: 25%;
+    width: 32%;
     margin: 5px;
+    height: 30vh;
   }
 
   label img {
