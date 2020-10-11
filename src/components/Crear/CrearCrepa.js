@@ -33,6 +33,33 @@ export default class Crearcrepa extends Component {
        
     }
 
+    resetValues =()=>{
+        window.location = '/crear';
+        // this.setState({
+        //     ingredientes:{
+        //         rellenos:[ 
+        //             {Nombre:"Leche Condensada", isChecked:false,},
+        //             {Nombre:"Nutella", isChecked:false,},
+        //             {Nombre:"Mermelada de Mora", isChecked:false,},
+        //             {Nombre:"Mermelada de Fresa", isChecked:false,}],
+        //         toppings:[
+        //             {Nombre:"Chocolate", isChecked:false,},
+        //             {Nombre:"Caramelo", isChecked:false,},
+        //             {Nombre:"Confitura", isChecked:false,},
+        //             {Nombre:"Botonetas", isChecked:false,},
+        //             {Nombre:"Masmelo", isChecked:false,},
+        //             {Nombre:"Tapita", isChecked:false,}],
+        //         frutas:[ 
+        //             {Nombre:"Banano", isChecked:false,},
+        //             {Nombre:"Fresa", isChecked:false,},
+        //             {Nombre:"Kiwi", isChecked:false,},
+        //             {Nombre:"Manzana", isChecked:false,},
+        //             {Nombre:"Melocotón", isChecked:false,}]
+        //     },
+        //     Quantity:1 
+        // });
+    }
+
     generateRelleno(){
         return  this.state.ingredientes.rellenos.map((relleno, i)=> 
            <Ingredientes Ingrediente={relleno} CantMax={1} Tipo={"Relleno"} handleClick={this.handleIngredienteClick} key={i} ></Ingredientes>
@@ -113,6 +140,19 @@ export default class Crearcrepa extends Component {
         }
     }
 
+    handleAddCrepa =()=>{
+        var crepasStorage = JSON.parse(localStorage.getItem('crepas'));
+        if(!crepasStorage){
+            localStorage.setItem('crepas',  JSON.stringify([this.state]));
+            alert('undefined bro!')
+        }else{
+            let tempStorage = [...crepasStorage, this.state];
+            localStorage.setItem('crepas', JSON.stringify(tempStorage));
+        }
+        this.resetValues();
+        
+    }
+
     render() {
         return (
            <div id="crearCrepas">
@@ -152,7 +192,7 @@ export default class Crearcrepa extends Component {
                             <span className="math-icon plus" onClick={()=>this.handleQuantity("plus")}></span>
                         </div>  
                         <div className="container-btn-crear-crepas">
-                            <button className="crear-crepas-btn">Añadir y diseñar otra</button>
+                            <button className="crear-crepas-btn" onClick={this.handleAddCrepa}>Añadir y diseñar otra</button>
                             <button className="crear-crepas-btn">Pedido Listo</button> 
                         </div> 
                             
