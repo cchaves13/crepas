@@ -15,7 +15,6 @@ class Popup extends React.Component {
     }else{
         this.setState({Quantity:this.state.Quantity <= 1 ? 1 : this.state.Quantity -1});        
     }    
-    console.log(this.state.Quantity);
   }
 
   handleOrdenar = ()=>{    
@@ -42,7 +41,7 @@ class Popup extends React.Component {
                             <input value={this.state.Quantity} disabled></input>
                             <span className="icon-math suma" onClick={()=>this.handleQuantity("plus")}></span>
                    </div>
-                  <button className='btn-Popup' onClick={this.props.closePopup}>Cancelar</button>  
+                  <button className='btn-Popup cancelar' onClick={this.props.closePopup}>Cancelar</button>  
                   <button className='btn-Popup' onClick={()=>this.handleOrdenar()}>Ordenar</button>  
             </div>  
             </div>  

@@ -18,6 +18,7 @@
   margin: auto;
   border-radius: 20px;
   background: white;
+  height: 240px;
 }
 
 .btn-Popup{
@@ -26,12 +27,15 @@
   color: #fff;
   margin-top: 43px;
   width: 32%;
-  cursor: pointer;
-  margin-left: 32px;
-  margin-right: 24px;
+  cursor: pointer;  
   font-family: 'Amatic SC';
   font-size: 33px;
+  display: inline-block;
 }
+.cancelar{
+  margin-right: 20px;
+}
+
 .btn-Popup:hover{
   -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
@@ -43,15 +47,15 @@
 
 .quant-container{
   margin-bottom: 15px;
-  margin-top: 14px; 
-  position: relative;
-  height: 10px;  
+  margin-top: 14px;   
+  display: block;
 }
 .quant-container input{
   display: inline-block;
   width: 35px;
   text-align: center;
   vertical-align: top;
+  margin: 0px 10px 0px 10px;
 }
 .icon-math{
   background-size: cover;
@@ -62,13 +66,11 @@
 } 
 .suma{
   background-image: url('/imgs/plus.svg');  
-  margin-right: 95px;
-  margin-left: 15px; 
+  
 }
 .resta{            
   background-image: url('/imgs/minus.svg');
-  margin-right: 15px;
-  margin-left: 95px;
+  
 }
 @media only screen and (max-width: 680px){
   .inner {  
@@ -79,10 +81,6 @@
     padding: 6px;
   }
   .quant-container{
-    margin-bottom: 15px;
-    margin-top: 14px; 
-    position: relative;
-    display: inline-block;
-    height: 10px;  
+    
   }
 }
