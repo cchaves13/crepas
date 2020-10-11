@@ -48,7 +48,9 @@ class Crepas extends Component {
                         <button className="crepas-btn" onClick={this.togglePopup.bind(this)}>Añadir al Pedido </button>
                         {this.state.showPopup?
                         <Popup
-                            text='Cantidad de Crepas'closePopup={this.togglePopup.bind(this)}>
+                            text='Cantidad de Crepas'closePopup={this.togglePopup.bind(this)}
+                            crepa={this.props.CrepasProps}
+                            >
                         </Popup>: null}
                     </div>
 

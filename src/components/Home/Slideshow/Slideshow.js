@@ -14,26 +14,27 @@ class Slideshow extends Component {
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
                         <div className="swiper-slide"> 
-                            <div id="container-img1">
-                                <div id="container-draw1" >
-                                    <h2 id="titleSlide1" >
-                                        UN BUEN ESTADO DE ÁNIMO ES REFLEJO DE UNA BUENA CREPA</h2>
+                            <div id="container-img1" className="compartido-img">
+                                <div className="container-draw">
+                                    <h2 className="titleSlide"  >
+                                        Suspira con el sabor unico que elaboramos solo para ti</h2>
                                 </div>
                             </div>
                         </div>
                         <div className="swiper-slide">
-                            <div id="container-img2">
-                                <div id="container-draw2" >
-                                    <h2 id="titleSlide2" >
+                            <div id="container-img2" className="compartido-img">
+                                <div className="container-draw" >
+                                    <h2 className="titleSlide" >
                                     UNA CREPA ES LA RESPUESTA NO IMPORTA CUÁL SEA LA PREGUNTA</h2>
                                 </div>
                             </div>
                         </div>
                         <div className="swiper-slide">
-                        <div id="container-img3">
-                                <div id="container-draw3" >
-                                    <h2 id="titleSlide3" >
-                                    NO HAY PROBLEMA QUE NO SE PUEDA SOLUCIONAR CON UNA DELICIOSA CREPA</h2>
+                        <div id="container-img3" className="compartido-img">
+                                <div className="container-draw" >
+                                    <h2 className="titleSlide"  >
+                                        Se te antoja?<br></br> Un gustico para disfrutar de este dia.
+                                    </h2>
                                 </div>
                             </div>
                         </div>

@@ -9,11 +9,26 @@ class Popup extends React.Component {
   }
 
   handleQuantity = (operation)=>{
+    
     if(operation == "plus"){
         this.setState({Quantity:this.state.Quantity +1});
     }else{
-        this.setState({Quantity:this.state.Quantity <= 1 ? 1 : this.state.Quantity -1});
-    }
+        this.setState({Quantity:this.state.Quantity <= 1 ? 1 : this.state.Quantity -1});        
+    }    
+  }
+
+  handleOrdenar = ()=>{
+    this.props.crepa.crepa.Quantity = this.state.Quantity;
+    var crepasStorage = JSON.parse(localStorage.getItem('crepas'));
+    if(!crepasStorage){
+        localStorage.setItem('crepas',  JSON.stringify([this.props.crepa.crepa]));
+        alert('undefined bro!')
+    }else{
+        let tempStorage = [...crepasStorage, this.props.crepa.crepa];
+        localStorage.setItem('crepas', JSON.stringify(tempStorage));
+    }    
+    this.props.closePopup();
+
   }
   render() {    
     return (  
@@ -27,7 +42,7 @@ class Popup extends React.Component {
                             <span className="icon-math suma" onClick={()=>this.handleQuantity("plus")}></span>
                    </div>
                   <button className='btn-Popup' onClick={this.props.closePopup}>Cancelar</button>  
-                  <button className='btn-Popup' onClick={this.props.closePopup}>Ordenar</button>  
+                  <button className='btn-Popup' onClick={()=>this.handleOrdenar()}>Ordenar</button>  
             </div>  
             </div>  
         );  

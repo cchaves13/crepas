@@ -6,6 +6,8 @@ class Confirmacion extends Component{
     constructor(props){
         super(props);
         let localStorageTemp = JSON.parse(localStorage.getItem('crepas'));
+        localStorageTemp.map((x, index)=> {x.Id = index});
+        console.log(localStorageTemp);
         this.state={
             crepas:localStorageTemp,            
         }
@@ -49,6 +51,13 @@ class Confirmacion extends Component{
         var uri = "https://api.whatsapp.com/send?phone=50685988304&text="+mensajeEncoded;
         window.location = uri;        
     }
+
+    handleDelete=(crepa)=>{
+        console.log(crepa);
+        var newCrepasArray = this.state.crepas.filter(x=> x.Id !== crepa.Id);
+        this.setState({crepas:newCrepasArray});
+        localStorage.setItem('crepas', JSON.stringify(newCrepasArray));
+    }
     render(){
         return(
         <div>
@@ -70,7 +79,7 @@ class Confirmacion extends Component{
               <tbody>
                 {this.state.crepas.map(x=> (
                     <tr>
-                        <td>{x.Quantity}</td>
+                        <td className="cantidad-crepa">{x.Quantity}</td>
                         <td>
                             {this.generateDescription(x).relleno}
                             <br></br>
@@ -81,7 +90,7 @@ class Confirmacion extends Component{
                             {this.generateDescription(x).toppings}
                         </td>
                         <td>₡{parseInt(x.Quantity) * 2000 }</td>
-                        <td><img className="icon-delete" src ="imgs/delete.svg"></img></td>
+                        <td><img className="icon-delete" src ="imgs/delete.svg" onClick={()=>{this.handleDelete(x)}}></img></td>
                         
                     </tr>
                 ))}
