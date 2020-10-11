@@ -5,35 +5,95 @@ class Confirmacion extends Component{
 
     constructor(props){
         super(props);
+        let localStorageTemp = JSON.parse(localStorage.getItem('crepas'));
+        this.state={
+            crepas:localStorageTemp,            
+        }
     }
 
+    calculateTotal = () => {
+        let total = 0;
+        this.state.crepas.map(x=> { total += parseInt(x.Quantity) * 2000});
+        return total;
+    }
+    generateDescription = (crepa)=>{
+        let frutas = crepa.ingredientes.frutas.filter(x=> x.isChecked);
+        let rellenos = crepa.ingredientes.rellenos.filter(x=> x.isChecked);
+        let toppings = crepa.ingredientes.toppings.filter(x=> x.isChecked);
+        let rellenoString = "Relleno: ";
+        rellenos.map(x=> {rellenoString+= x.Nombre + " "});
+
+        let frutasString  =  "Frutas: ";
+        frutas.map(x=> {frutasString+= x.Nombre + " "});
+        let toppingsString = "Topping: ";
+        toppings.map(x=> {toppingsString+= x.Nombre + " "});
+
+        var returnValue = {frutas:frutasString, relleno:rellenoString, toppings:toppingsString}
+        
+        return returnValue;
+
+    }
+
+    handleEnviarPedido = ()=>{
+        var nombreCliente = document.getElementById("nombreCliente").value;
+        
+        var mensaje = "Nombre: " + nombreCliente + "\n";
+        this.state.crepas.map(x=> {
+            mensaje += this.generateDescription(x).relleno;
+            mensaje += this.generateDescription(x).frutas;
+            mensaje += this.generateDescription(x).toppings;
+            mensaje += "\nCantidad: " + x.Quantity;
+            mensaje += "\n******\n";
+        });
+        var mensajeEncoded = encodeURI(mensaje);
+        var uri = "https://api.whatsapp.com/send?phone=50685988304&text="+mensajeEncoded;
+        window.location = uri;        
+    }
     render(){
         return(
         <div>
-            <h1>Confirma tu pedido</h1>
-            <h2>Detalle de tu pedido</h2>
+            <h1 className="confirmar-title">Confirma tu pedido</h1>
+            <div className="important-banner">
+                <h2 className="subtitle-left">Detalle de tu pedido</h2>
+                <h2 className="subtitle-right">Total: <span>₡</span> {this.calculateTotal()}</h2>
+            </div>
             <div className="table-detalle">
             <table>
-                <tr>
-                    <th>Cantidad</th>
-                    <th>Descripción de tu pedido</th>
-                    <th>Eliminar</th>
-                    <th>Precio</th>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Crepa creada 1 (caramelo, fresa, banano, kiwi, coco, caramelo)</td>
-                    <td>x</td>
-                    <td>$4</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>TOTAL</td>
-                    <td>$4</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Cant</th>
+                        <th>Descripción</th>                        
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+              <tbody>
+                {this.state.crepas.map(x=> (
+                    <tr>
+                        <td>{x.Quantity}</td>
+                        <td>
+                            {this.generateDescription(x).relleno}
+                            <br></br>
+                            <br></br>
+                            {this.generateDescription(x).frutas}
+                            <br></br>
+                            <br></br>
+                            {this.generateDescription(x).toppings}
+                        </td>
+                        <td>₡{parseInt(x.Quantity) * 2000 }</td>
+                        <td><img className="icon-delete" src ="imgs/delete.svg"></img></td>
+                        
+                    </tr>
+                ))}
+              </tbody>
             </table>
+            
             </div>
+            <div className="input-name">
+                <h2>Nombre:</h2>
+                <input id="nombreCliente" ></input>                
+            </div>
+            <a className="btn-enviar-pedido" onClick={this.handleEnviarPedido}>Enviar Pedido</a>
         </div>       
         )
     }
