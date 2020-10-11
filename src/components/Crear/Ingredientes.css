@@ -1,8 +1,18 @@
-
+.contenedor-Ingrediente{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .contenedor-Ingrediente
 {
-  width: 49%;
+  width: 40%;
   display: inline-block;
+  height: 12vh;
+  margin: 2%;
+  /* border: 2px solid #e29d08f3; */
+}
+
+.checked{
+  border: 5px solid #e29d08f3;
 }
 
 input[type="checkbox"][id^="checkbox"] {

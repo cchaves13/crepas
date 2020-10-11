@@ -41,14 +41,13 @@
     background-color: #3ea396;
     padding: 1px;
     color: #fff;
-    margin-top: 4px;
-    margin: 10px;
-    width: 59%;
-    cursor: pointer;
-    margin-left: 82px;
-    margin-right: 10px;
+    display: block;
+    margin: 30px auto 0 auto;        
+    width: 60%;
+    cursor: pointer;    
     font-family: 'Amatic SC';
     font-size: 29px;
+
 }
 .container-btn-crear-crepas{
     width: 100%;
