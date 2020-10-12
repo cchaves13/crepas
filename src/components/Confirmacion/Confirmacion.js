@@ -94,7 +94,7 @@ class Confirmacion extends Component{
             <h1 className="confirmar-title">Confirma tu pedido</h1>
             <div className="important-banner">
                 <h2 className="subtitle-left">Detalle de tu pedido</h2>
-                <h2 className="subtitle-right">Total: <span>₡</span> {this.calculateTotal()}</h2>
+                
             </div>
             <div className="table-detalle">
             <table>
@@ -103,7 +103,7 @@ class Confirmacion extends Component{
                         <th>Cant</th>
                         <th>Descripción</th>                        
                         <th>Precio</th>
-                        <th></th>
+                        <th>Borrar</th>
                     </tr>
                 </thead>
               <tbody>
@@ -124,7 +124,7 @@ class Confirmacion extends Component{
                             {this.generateDescription(x).toppings}
                         </td>
                         <td>₡{parseInt(x.Quantity) * 2000 }</td>
-                        <td><img className="icon-delete" src ="imgs/delete.svg" onClick={()=>{this.handleDelete(x)}}></img></td>
+                        <td style={{ textAlign:"center"}} ><img className="icon-delete" src ="imgs/delete.svg" onClick={()=>{this.handleDelete(x)}}></img></td>
                         
                     </tr>
                 ))}
@@ -132,8 +132,11 @@ class Confirmacion extends Component{
             </table>
             
             </div>
+            <div>
+            <h2 className="subtitle-right">Total: <span>₡</span> {this.calculateTotal()}</h2>
+            </div>
             <div className="input-name">
-                <h2>Nombre:</h2>
+                <h2>Pedido a nombre de:</h2>
                 <input id="nombreCliente" ></input>                
             </div>
             <a className="btn-enviar-pedido" onClick={this.handleEnviarPedido}>Enviar Pedido</a>

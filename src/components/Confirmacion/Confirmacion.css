@@ -40,7 +40,7 @@
   .subtitle-right{
     width: fit-content;
     float: right;
-    padding-right: 5px;
+    padding-right: 15px;
   }
 
   .subtitle-right span{
@@ -54,7 +54,7 @@
   .input-name{
     width: auto;
     padding: 5px;
-    float: left;
+    margin-top: 35px;
   }
   .input-name h2{
     float: left;
@@ -70,9 +70,13 @@
     color: #000;    
     font-weight: 800;
     letter-spacing: 1px;
-    float: right;
-    margin-right: 30px;
     font-family: 'Amatic SC', cursive;
+    display: block;
+    font-size: 25px;
+    margin: 30px auto 0 auto;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10px;
   }
   .cantidad-crepa{
     text-align: center !important;
@@ -84,5 +88,12 @@
   .cant-number{
     display: block;
     margin: 10px 1px;
+  }
+  @media screen and (min-width: 800px)
+  {
+    .btn-enviar-pedido{
+      width: 25%;
+    }
+   
   }
   
