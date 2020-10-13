@@ -17,7 +17,7 @@ class Slideshow extends Component {
                             <div id="container-img1" className="compartido-img">
                                 <div className="container-draw">
                                     <h2 className="titleSlide"  >
-                                        Suspira con el sabor unico que elaboramos solo para ti</h2>
+                                        Suspira con el sabor único que elaboramos solo para ti</h2>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +33,7 @@ class Slideshow extends Component {
                         <div id="container-img3" className="compartido-img">
                                 <div className="container-draw" >
                                     <h2 className="titleSlide"  >
-                                        Se te antoja?<br></br> Un gustico para disfrutar de este dia.
+                                        ¿Se te antoja?<br></br> Un gustico para disfrutar de este dia.
                                     </h2>
                                 </div>
                             </div>
