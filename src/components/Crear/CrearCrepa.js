@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Alert from '../Alert/Alert'
 import './CrearCrepa.css'
 import Ingredientes from './Ingredientes'
 
@@ -28,36 +29,21 @@ export default class Crearcrepa extends Component {
                     {Nombre:"Manzana", isChecked:false,},
                     {Nombre:"Melocotón", isChecked:false,}]
             },
-            Quantity:1 
+            Quantity:1,
+            alert:{
+                message:"Agregada!",
+                visible: false
+            } 
         }
        
     }
 
     resetValues =()=>{
-        window.location = '/crear';
-        // this.setState({
-        //     ingredientes:{
-        //         rellenos:[ 
-        //             {Nombre:"Leche Condensada", isChecked:false,},
-        //             {Nombre:"Nutella", isChecked:false,},
-        //             {Nombre:"Mermelada de Mora", isChecked:false,},
-        //             {Nombre:"Mermelada de Fresa", isChecked:false,}],
-        //         toppings:[
-        //             {Nombre:"Chocolate", isChecked:false,},
-        //             {Nombre:"Caramelo", isChecked:false,},
-        //             {Nombre:"Confitura", isChecked:false,},
-        //             {Nombre:"Botonetas", isChecked:false,},
-        //             {Nombre:"Masmelo", isChecked:false,},
-        //             {Nombre:"Tapita", isChecked:false,}],
-        //         frutas:[ 
-        //             {Nombre:"Banano", isChecked:false,},
-        //             {Nombre:"Fresa", isChecked:false,},
-        //             {Nombre:"Kiwi", isChecked:false,},
-        //             {Nombre:"Manzana", isChecked:false,},
-        //             {Nombre:"Melocotón", isChecked:false,}]
-        //     },
-        //     Quantity:1 
-        // });
+        this.setState({...this.state, alert:{message:"Agregada!", visible: true}});        
+        setTimeout(()=>{
+            window.location = '/crear';
+        }, 1500);       
+        
     }
 
     generateRelleno(){
@@ -140,7 +126,7 @@ export default class Crearcrepa extends Component {
         }
     }
 
-    handleAddCrepa =()=>{
+    handleAddCrepa =(typeButton)=>{
         var crepasStorage = JSON.parse(localStorage.getItem('crepas'));
         if(!crepasStorage){
             localStorage.setItem('crepas',  JSON.stringify([this.state]));
@@ -149,9 +135,17 @@ export default class Crearcrepa extends Component {
             let tempStorage = [...crepasStorage, this.state];
             localStorage.setItem('crepas', JSON.stringify(tempStorage));
         }
-        this.resetValues();
+        if(typeButton=="otra")
+        {
+            window.location = '/crear';
+        }
+        else{
+            window.location = '/confirmacion';
+        }
+        //this.resetValues();
         
     }
+
 
     render() {
         return (
@@ -192,8 +186,8 @@ export default class Crearcrepa extends Component {
                             <span className="math-icon plus" onClick={()=>this.handleQuantity("plus")}></span>
                         </div>  
                         <div className="container-btn-crear-crepas">
-                            <button className="crear-crepas-btn" onClick={this.handleAddCrepa}>Añadir y diseñar otra</button>
-                            <button className="crear-crepas-btn">Pedido Listo</button> 
+                            <button className="crear-crepas-btn" onClick={()=>{this.handleAddCrepa("otra")}}>Añadir y diseñar otra</button>
+                            <button className="crear-crepas-btn" onClick={()=>{this.handleAddCrepa("listo")}}>Pedido Listo</button> 
                         </div> 
                             
                     </div>
@@ -205,6 +199,7 @@ export default class Crearcrepa extends Component {
 
                 <div className="swiper-scrollbar"></div>
             </div>
+            <Alert message={this.state.alert.message} visible={this.state.alert.visible}></Alert>
            </div>
         )
     }

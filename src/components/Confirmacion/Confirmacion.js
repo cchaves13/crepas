@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Alert from '../Alert/Alert';
 import './Confirmacion.css'
 
 class Confirmacion extends Component{
@@ -10,11 +11,13 @@ class Confirmacion extends Component{
             localStorageTemp.map((x, index)=> {x.Id = index});
             console.log(localStorageTemp);
             this.state={
-                crepas:localStorageTemp,            
+                crepas:localStorageTemp,
+                alert:{message:"", visible: false}            
             }
         }else{
             this.state = {
-                crepas:[]
+                crepas:[],
+                alert:{message:"", visible: false}
             }
         }
     
@@ -30,12 +33,12 @@ class Confirmacion extends Component{
         let frutas = crepa.ingredientes.frutas.filter(x=> x.isChecked);
         let rellenos = crepa.ingredientes.rellenos.filter(x=> x.isChecked);
         let toppings = crepa.ingredientes.toppings.filter(x=> x.isChecked);
-        let rellenoString = "Relleno: ";
+        let rellenoString = "\nRelleno: ";
         rellenos.map(x=> {rellenoString+= x.Nombre + " "});
 
-        let frutasString  =  "Frutas: ";
+        let frutasString  =  "\nFrutas: ";
         frutas.map(x=> {frutasString+= x.Nombre + " "});
-        let toppingsString = "Topping: ";
+        let toppingsString = "\nTopping: ";
         toppings.map(x=> {toppingsString+= x.Nombre + " "});
 
         var returnValue = {frutas:frutasString, relleno:rellenoString, toppings:toppingsString}
@@ -46,18 +49,25 @@ class Confirmacion extends Component{
 
     handleEnviarPedido = ()=>{
         var nombreCliente = document.getElementById("nombreCliente").value;
-        
-        var mensaje = "Nombre: " + nombreCliente + "\n";
-        this.state.crepas.map(x=> {
-            mensaje += this.generateDescription(x).relleno;
-            mensaje += this.generateDescription(x).frutas;
-            mensaje += this.generateDescription(x).toppings;
-            mensaje += "\nCantidad: " + x.Quantity;
-            mensaje += "\n******\n";
-        });
-        var mensajeEncoded = encodeURI(mensaje);
-        var uri = "https://api.whatsapp.com/send?phone=50685988304&text="+mensajeEncoded;
-        window.location = uri;        
+        if(nombreCliente){
+            var mensaje = "Nombre: " + nombreCliente;
+            this.state.crepas.map(x=> {
+                mensaje += this.generateDescription(x).relleno;
+                mensaje += this.generateDescription(x).frutas;
+                mensaje += this.generateDescription(x).toppings;
+                mensaje += "\nCantidad: " + x.Quantity;
+                mensaje += "\n******\n";
+            });
+            var mensajeEncoded = encodeURI(mensaje);
+            var uri = "https://api.whatsapp.com/send?phone=50685988304&text="+mensajeEncoded;
+            window.location = uri;
+        }else{
+            this.setState({...this.state, alert:{message:"Escribe tu Nombre", visible: true}});     
+            setTimeout(() => {
+                this.setState({...this.state, alert:{message:"Escribe tu Nombre", visible: false}});     
+            }, 2000);      
+        }
+            
     }
 
     handleDelete=(crepa)=>{
@@ -85,6 +95,7 @@ class Confirmacion extends Component{
                     x.Quantity-= 1;
                 }
             });            
+            this.setState({crepas:crepaArray});
             localStorage.setItem('crepas', JSON.stringify(crepaArray));
         }
     }
@@ -139,7 +150,8 @@ class Confirmacion extends Component{
                 <h2>Pedido a nombre de:</h2>
                 <input id="nombreCliente" ></input>                
             </div>
-            <a className="btn-enviar-pedido" onClick={this.handleEnviarPedido}>Enviar Pedido</a>
+            <a className="btn-enviar-pedido" onClick={this.handleEnviarPedido}>Enviar Pedido</a>            
+            <Alert message={this.state.alert.message} visible={this.state.alert.visible}></Alert> 
         </div>       
         )
     }

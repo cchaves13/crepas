@@ -1,11 +1,15 @@
 import React from 'react';  
+import Alert from '../../Alert/Alert';
 import './popup.css';  
 
 class Popup extends React.Component {  
   constructor(props) {
     super(props)
 
-        this.state = {Quantity:1 }
+        this.state = {
+          Quantity:1,
+          alert:{message:"Agregada!", visible: false}
+         }
   }
 
   handleQuantity = (operation)=>{
@@ -22,12 +26,15 @@ class Popup extends React.Component {
     var crepasStorage = JSON.parse(localStorage.getItem('crepas'));
     if(!crepasStorage){
         localStorage.setItem('crepas',  JSON.stringify([this.props.crepa.crepa]));
-        alert('undefined bro!')
     }else{
         let tempStorage = [...crepasStorage, this.props.crepa.crepa];
         localStorage.setItem('crepas', JSON.stringify(tempStorage));
-    }    
-    this.props.closePopup();
+    } 
+    this.setState({...this.state, alert:{message:"Agregada!", visible: true}});           
+    setTimeout(()=>{
+      this.props.closePopup();
+    }, 1000)
+    
 
   }
   render() {    
@@ -43,7 +50,8 @@ class Popup extends React.Component {
                    </div>
                   <button className='btn-Popup cancelar' onClick={this.props.closePopup}>Cancelar</button>  
                   <button className='btn-Popup' onClick={()=>this.handleOrdenar()}>Ordenar</button>  
-            </div>  
+            </div>             
+            <Alert message={this.state.alert.message} visible={this.state.alert.visible}></Alert> 
             </div>  
         );  
     }  
