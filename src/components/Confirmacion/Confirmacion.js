@@ -145,6 +145,7 @@ class Confirmacion extends Component{
             </div>
             <div>
             <h2 className="subtitle-right">Total: <span>₡</span> {this.calculateTotal()}</h2>
+            <h2 className="subtitle-left">¡Recuerda todas nuestras crepas incluyen 2 bolas de helado!</h2><br></br><br></br><br></br>
             </div>
             <div className="input-name">
                 <h2>Pedido a nombre de:</h2>
