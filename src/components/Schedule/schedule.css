@@ -1,70 +1,3 @@
- /* .titulo{
-    margin: auto;
-    margin-block-end: 8%;
-    margin-left: 5%;
-    font-size: 40px;
-    display: block;
-    font-family: 'Pacifico', cursive;
-    
-}
-.box-general{
-    text-align: center;
-    text-align: center;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    width: 100%;
-    height: 400px;
-}
-
-.containerExpress{
-    width: 30%;
-    height: 400px;
-    background-color: brown;
-    display: inline-block;
-}
-.containerVerCreapas{
-    width: 30%;
-    height: 400px;
-    background-color: green;
-    display: inline-block;
-}
-
-#container1{
-    background-image: url("/imgs/cuadro1.png");
-}
-#container2{
-    background-image: url("/imgs/cuadro2.png");
-}
-#container3{
-    background-image: url("/imgs/cuadro3.png");
-}
-.container-cajitas{
-    width:25%;
-    height: 200px;
-    display:inline-block;
-    margin: 15px;
-    padding: 1%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 3px 3px;
-
-}
-
-
-
-@media only screen and (max-width: 780px) {
-    .container-cajitas {
-        width:93%;
-        display: block;
-        margin: 10px auto;
-        background-repeat: no-repeat;
-    }
-  
-    
-  }
-
-   */
-
    .box-general{      
        width: 95%;
        display: block;
@@ -149,7 +82,10 @@
    @media only screen and (max-width: 680px) {
         .box{
             padding: 10px;
-            font-size: 14px;
+            font-size: 13px;
+        }
+        .box:hover{
+            font-size: 15px;
         }
         .horario-box .info{
             font-size: 14px;
