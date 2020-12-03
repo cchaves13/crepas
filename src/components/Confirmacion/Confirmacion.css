@@ -54,6 +54,7 @@
   .icon-delete{
     width: auto;
     height: 30px;
+    cursor: pointer;
   }
   .input-name{
     width: auto;

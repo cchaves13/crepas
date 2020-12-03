@@ -66,7 +66,7 @@ class Schedule extends Component {
                     <h2 style={{ textAlign: 'center' }}>
                             <span> Las crepas de Vale</span> te ofrece dos métodos de pago
                         </h2>
-                        <h2 style={{ textAlign: 'center' }}> Para que cancelar tu compra fácilmente </h2>
+                        <h2 style={{ textAlign: 'center' }}> Para cancelar tu compra fácilmente </h2>
                         <br></br>
                         <br></br>
                         <h2 style={{ textAlign: 'center' }}>

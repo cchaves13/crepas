@@ -92,7 +92,7 @@ class Confirmacion extends Component{
         }else{
             crepaArray.map((x)=> {
                 if(x.Id == element.Id){
-                    x.Quantity-= 1;
+                    x.Quantity = x.Quantity <= 1 ? 1 : x.Quantity -1;                            
                 }
             });            
             this.setState({crepas:crepaArray});
@@ -145,7 +145,9 @@ class Confirmacion extends Component{
             </div>
             <div>
             <h2 className="subtitle-right">Total: <span>₡</span> {this.calculateTotal()}</h2>
-            <h2 className="subtitle-left">¡Recuerda todas nuestras crepas incluyen 2 bolas de helado!</h2><br></br><br></br><br></br>
+            <h2 className="subtitle-left">¡Recuerda todas nuestras crepas incluyen 2 bolas de helado!<br></br>
+                Servicio express gratis hasta las 7:00pm
+            </h2><br></br><br></br><br></br>
             </div>
             <div className="input-name">
                 <h2>Pedido a nombre de:</h2>
