@@ -128,20 +128,32 @@ export default class Crearcrepa extends Component {
 
     handleAddCrepa =(typeButton)=>{
         var crepasStorage = JSON.parse(localStorage.getItem('crepas'));
-        if(!crepasStorage){
-            localStorage.setItem('crepas',  JSON.stringify([this.state]));
-            alert('undefined bro!')
+        var frutasCount = this.state.ingredientes.frutas.filter(x=> x.isChecked).length;
+        var toppingCount = this.state.ingredientes.toppings.filter(x=> x.isChecked).length;
+        var rellenoCount = this.state.ingredientes.rellenos.filter(x=> x.isChecked).length;
+        if(frutasCount > 0 && toppingCount > 0 && rellenoCount > 0){
+            if(!crepasStorage){
+                localStorage.setItem('crepas',  JSON.stringify([this.state]));
+            }else{
+                let tempStorage = [...crepasStorage, this.state];
+                localStorage.setItem('crepas', JSON.stringify(tempStorage));
+            }
+            if(typeButton=="otra")
+            {
+                window.location = '/crear';
+            }
+            else{
+                window.location = '/confirmacion';
+            }
         }else{
-            let tempStorage = [...crepasStorage, this.state];
-            localStorage.setItem('crepas', JSON.stringify(tempStorage));
+            this.setState({...this.state, alert:{message:"No escojiste suficientes ingredientes", visible: true}});     
+            setTimeout(() => {
+                this.setState({...this.state, alert:{message:"No escojiste suficientes ingredientes", visible: false}});     
+            }, 2000);  
         }
-        if(typeButton=="otra")
-        {
-            window.location = '/crear';
-        }
-        else{
-            window.location = '/confirmacion';
-        }
+
+
+        
         //this.resetValues();
         
     }

@@ -11,6 +11,7 @@
     justify-content: center;
     height: 60px;
     transition: all 0.3s;
+    z-index: 21;
 }
 
 .alert-container h3{
