@@ -101,7 +101,7 @@ class Confirmacion extends Component{
     }
     render(){
         return(
-        <div>
+        <div id="Confirmacion">
             <h1 className="confirmar-title">Confirma tu pedido</h1>
             <div className="important-banner">
                 <h2 className="subtitle-left">Detalle de tu pedido</h2>
