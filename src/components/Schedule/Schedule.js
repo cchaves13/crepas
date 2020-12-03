@@ -14,9 +14,7 @@ class Schedule extends Component {
         return (
             <div>
                 <div className="box-general">
-                    <div className="box">
-                        <h2 style={{ textAlign: 'center' }}> Para que no salgas de casa</h2>
-                        <br></br>
+                    <div className="box">                        
                         <h2 style={{ textAlign: 'center' }}>
                             <span> Las crepas de Vale</span> le ofrece servicio Express.
                         </h2>
