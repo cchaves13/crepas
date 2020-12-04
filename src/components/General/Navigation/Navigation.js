@@ -13,6 +13,23 @@ class Navigation extends Component{
         this.state = {
             isSidebarOpen: false
         }
+        this.listenMenuClick();
+    }
+
+    listenMenuClick = () =>{
+        document.addEventListener('click', (e)=> {
+            e.stopPropagation();
+            var navigationIsOpen = document.getElementsByTagName('nav')[0].classList.contains('show');
+            var buttonMobile = document.getElementsByClassName('menu-button')[0];
+           if((navigationIsOpen && !buttonMobile.contains(e.target) && !e.target.classList.contains('menu-link')) || 
+              (navigationIsOpen && e.target.classList.contains('menu-link'))){
+              this.handleMenuButtonClick();
+           }
+
+           
+               
+
+        });
     }
 
     handleMenuButtonClick=()=>{

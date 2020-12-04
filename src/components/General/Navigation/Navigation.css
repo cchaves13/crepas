@@ -26,11 +26,11 @@
     -o-transition: left 0.3s ease-in; 
     transition: left 0.3s ease-in;
     text-align: center;
-    left: 0;
+    left: -100%;
     
 }
 .nav.show{  
-    left:-100%;
+    left:0;
 }
 
 .menu-button i{
