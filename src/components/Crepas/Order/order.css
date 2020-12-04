@@ -1,5 +1,6 @@
 #order{
     padding-top: 90px;
+    min-height: 80vh;
 }
 #order h1{
     text-align: center;
