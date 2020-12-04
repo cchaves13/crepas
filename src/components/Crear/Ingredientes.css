@@ -10,7 +10,14 @@
   margin: 2%;
   /* border: 2px solid #e29d08f3; */
 }
-
+@media only screen and (max-width: 991px){
+  .contenedor-Ingrediente{
+    width: 30%;
+    height: 30vw;
+    border-radius: 100%;
+    background-position: center;
+  }
+}
 .checked{
   border: 5px solid #e29d08f3;
 }
