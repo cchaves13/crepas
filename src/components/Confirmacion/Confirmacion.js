@@ -60,7 +60,9 @@ class Confirmacion extends Component{
             });
             var mensajeEncoded = encodeURI(mensaje);
             var uri = "https://api.whatsapp.com/send?phone=50685988304&text="+mensajeEncoded;
+            localStorage.removeItem("crepas");
             window.location = uri;
+            
         }else{
             this.setState({...this.state, alert:{message:"Escribe tu Nombre", visible: true}});     
             setTimeout(() => {

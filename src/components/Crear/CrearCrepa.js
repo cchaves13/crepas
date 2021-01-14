@@ -146,9 +146,9 @@ export default class Crearcrepa extends Component {
                 window.location = '/confirmacion';
             }
         }else{
-            this.setState({...this.state, alert:{message:"No escojiste suficientes ingredientes", visible: true}});     
+            this.setState({...this.state, alert:{message:"No seleccionaste suficientes ingredientes", visible: true}});     
             setTimeout(() => {
-                this.setState({...this.state, alert:{message:"No escojiste suficientes ingredientes", visible: false}});     
+                this.setState({...this.state, alert:{message:"No seleccionaste suficientes ingredientes", visible: false}});     
             }, 2000);  
         }
 
