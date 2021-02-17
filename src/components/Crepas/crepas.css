@@ -40,6 +40,10 @@
     color: white;
 }
 
+.detalles h4{
+    text-align: left;
+}
+
 .detalles h5{
     margin-right: 7px;
 }
