@@ -64,13 +64,13 @@
    }
 
    .horario-box .crepas{
-       height: 400px;
+       height: 200px;
        background-size: cover;
        background-image: url('/imgs/Monday.jpg');
    }
 
    .horario-box .info{
-       height: 400px;
+       height: 200px;
        background-color: #e29d08f3;
        vertical-align: top;
        color: #fff;

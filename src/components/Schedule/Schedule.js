@@ -42,10 +42,10 @@ class Schedule extends Component {
                        <br></br>
                        <br></br>
                        <br></br>
-                       <h2> De Lunes a Viernes de 5:00pm a 9:30pm</h2>
+                       <h2> De Lunes a Domingo de 5:00pm a 9:00pm</h2>
                        <br></br>
                        <br></br>
-                       <h2> Sábados y Domingos de 2:00pm a 9:30pm</h2>
+                       {/* <h2> Sábados y Domingos de 2:00pm a 9:30pm</h2> */}
                        
                     </div>
                     <div className="crepas"></div>
